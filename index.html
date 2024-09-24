@@ -3,35 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title data-translate="title">Информация</title>
+    <title>Ваш Сайт</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="header">
         <img src="logo.png" alt="Логотип" class="logo">
         <div class="language-switch">
-            <label for="language" data-translate="languageLabel">Выберите язык:</label>
+            <label for="language">Выберите язык:</label>
             <select id="language" onchange="changeLanguage()">
                 <option value="ru">Русский</option>
                 <option value="en">English</option>
             </select>
         </div>
         <div class="nav">
-            <a href="index.html" data-translate="title">Информация</a>
-            <a href="biography.html" data-translate="biographyTitle">Биография</a>
-            <a href="gallery.html" data-translate="galleryTitle">Галерея</a>
-            <a href="about.html" data-translate="aboutTitle">О нас</a>
-            <a href="extra.html" data-translate="additionalTitle">Дополнительно</a>
+            <a href="index.html">Информация</a>
+            <a href="biography.html">Биография</a>
+            <a href="gallery.html">Галерея</a>
+            <a href="about.html">О нас</a>
+            <a href="extra.html">Дополнительно</a>
         </div>
     </div>
     <div class="content">
-        <h1 data-translate="title">Добро пожаловать на сайт</h1>
-        <p data-translate="welcomeText">Здесь вы найдете информацию о нашем проекте.</p>
-        <p data-translate="exampleText">Это пример сайта с несколькими страницами.</p>
+        <h1>Добро пожаловать на наш сайт!</h1>
+        <p>Это страница информации о нашем сайте.</p>
     </div>
     <div class="footer">
         &copy; 2024 Shurix
     </div>
-    <script src="script.js"></script>
+    <script>
+        function changeLanguage() {
+            const lang = document.getElementById('language').value;
+            // Здесь будет код для смены языка
+        }
+    </script>
 </body>
 </html>
+
