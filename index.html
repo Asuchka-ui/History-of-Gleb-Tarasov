@@ -1,38 +1,43 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Информация</title>
     <link rel="stylesheet" href="style.css">
+    <title>Ваш сайт</title>
 </head>
 <body>
-   <!-- Виджет рекламы -->
-<div id="ad-widget" class="ad-widget" style="display: none;">
-    <img src="ad-image.png" alt="Шуточная реклама" class="ad-image">
-    <button onclick="closeAdWidget()">Закрыть</button>
-</div>
 
-    <header>
-        <img src="logo.png" alt="Логотип компании" class="logo">
+    <div class="header">
+        <img src="your-logo.png" alt="Логотип" class="logo"> <!-- Замените на ваш логотип -->
         <nav>
-            <a href="index.html">Информация</a>
-            <a href="biography.html">Биография</a>
-            <a href="gallery.html">Галерея</a>
-            <a href="about.html">О нас</a> <!-- Изменено на ссылку на страницу О нас -->
+            <ul>
+                <li><a href="#" onclick="loadPage('info.html')">Информация</a></li>
+                <li><a href="#" onclick="loadPage('biography.html')">Биография</a></li>
+                <li><a href="#" onclick="loadPage('gallery.html')">Галерея</a></li>
+                <li><a href="#" onclick="loadPage('about.html')">О нас</a></li>
+            </ul>
         </nav>
-    </header>
+    </div>
 
-    <div class="container">
-        <h1>Информация</h1>
-        <p>Здесь будет текст, который вы хотите написать.</p>
+    <div id="content">
+        <!-- Здесь будет загружаться контент -->
+    </div>
+
+    <!-- Виджет рекламы -->
+    <div id="ad-widget" class="ad-widget" style="display: none;">
+        <img src="ad-image.png" alt="Шуточная реклама" class="ad-image">
+        <button onclick="closeAdWidget()">Закрыть</button>
     </div>
 
     <footer>
-        <p>&copy; 2024 Shurix</p>
+        <p>Shurix</p>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
+
 
 
 
