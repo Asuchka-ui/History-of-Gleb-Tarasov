@@ -1,71 +1,17 @@
-body {
-    font-family: 'Roboto', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #000; /* Черный фон */
-    color: #fff; /* Белый текст */
-}
-
-header {
-    background-color: #fff; /* Белый фон шапки */
-    color: #000; /* Черный текст */
-    padding: 10px 20px;
+.biography-container {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-header img {
-    width: 150px; /* Ширина логотипа */
-}
-
-nav a {
-    color: #000; /* Черный текст ссылок */
-    text-decoration: none;
-    margin: 0 15px;
-}
-
-nav a:hover {
-    text-decoration: underline; /* Подчеркивание при наведении */
-}
-
-.container {
-    padding: 20px;
+    align-items: center; /* Центрирование по вертикали */
 }
 
 .biography-photo {
-    width: 100%; /* Увеличиваем ширину фото для страницы биографии */
-    max-width: 400px; /* Ограничиваем максимальную ширину */
+    width: 400px; /* Ширина фото */
+    max-width: 100%; /* Адаптация под экран */
     border-radius: 10px; /* Закругленные углы */
-    margin: 20px 0; /* Отступ сверху и снизу */
+    margin-right: 20px; /* Отступ справа от фото */
 }
 
-.gallery {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px; /* Отступ между изображениями */
+.biography-text {
+    flex: 1; /* Занимает оставшееся пространство */
 }
 
-.gallery a {
-    text-align: center; /* Центрируем текст под изображениями */
-    color: #fff; /* Белый текст */
-}
-
-.gallery img {
-    width: 100%; /* Увеличиваем ширину фото в галерее */
-    max-width: 150px; /* Ограничиваем максимальную ширину для изображений в галерее */
-    border-radius: 10px; /* Закругленные углы */
-    transition: transform 0.3s ease; /* Анимация при наведении */
-}
-
-.gallery img:hover {
-    transform: scale(1.1); /* Увеличение изображения при наведении */
-}
-
-footer {
-    background-color: #000; /* Черный фон подвала */
-    color: #fff; /* Белый текст */
-    text-align: center;
-    padding: 10px;
-}
 
