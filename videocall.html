@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Видеозвонок</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="Логотип" />
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Информация</a></li>
+                <li><a href="biography.html">Биография</a></li>
+                <li><a href="gallery.html">Галерея</a></li>
+                <li><a href="about.html">О нас</a></li>
+                <li><a href="videocall.html">Видеозвонок</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Видеозвонок</h1>
+        <button id="start-video-call">Начать видеозвонок</button>
+        <video id="video" autoplay playsinline></video>
+    </main>
+
+    <footer>
+        <p>SHURIX</p>
+    </footer>
+
+    <script>
+        document.getElementById('start-video-call').addEventListener('click', async () => {
+            const video = document.getElementById('video');
+            try {
+                const stream = await navigator.mediaDevices.getUserMedia({ video: true });
+                video.srcObject = stream;
+            } catch (error) {
+                console.error("Ошибка доступа к камере:", error);
+            }
+        });
+    </script>
+</body>
+</html>
