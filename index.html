@@ -3,52 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Information</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
+    <title>Ваш сайт</title>
 </head>
 <body>
     <header>
-        <img src="logo.png" alt="Logo" class="logo">
+        <img src="logo.png" alt="Логотип" class="logo">
         <nav>
             <ul>
-                <li><a href="index.html" data-en="Information" data-ru="Информация">Information</a></li>
-                <li><a href="biography.html" data-en="Biography" data-ru="Биография">Biography</a></li>
-                <li><a href="gallery.html" data-en="Gallery" data-ru="Галерея">Gallery</a></li>
-                <li><a href="about.html" data-en="About Us" data-ru="О нас">About Us</a></li>
+                <li><a href="index.html">Информация</a></li>
+                <li><a href="biography.html">Биография</a></li>
+                <li><a href="gallery.html">Галерея</a></li>
+                <li><a href="about.html">О нас</a></li>
             </ul>
+            <div class="language-switcher">
+                <button onclick="switchLanguage('ru')">Русский</button>
+                <button onclick="switchLanguage('en')">English</button>
+            </div>
         </nav>
-        <!-- Кнопка переключения языка -->
-        <div class="language-switcher">
-            <button onclick="setLanguage('en')">EN</button>
-            <button onclick="setLanguage('ru')">RU</button>
-        </div>
     </header>
 
-    <section class="content">
-        <h1 data-en="Information Section" data-ru="Раздел Информация">Information Section</h1>
-        <p data-en="This is where you can write your text for the Information section." data-ru="Здесь вы можете написать текст для раздела информации.">This is where you can write your text for the Information section.</p>
-    </section>
+    <div class="content">
+        <h1>Добро пожаловать на наш сайт</h1>
+        <p>Это пример текста для информационной страницы.</p>
+
+        <div class="advertisement" id="advertisement"></div> <!-- Блок рекламы -->
+    </div>
 
     <footer>
-        <p class="watermark">SHURIX</p>
+        <p>SHURIX</p>
     </footer>
 
-    <!-- Реклама -->
-    <div id="ad-container">
-        <img src="ad-image.png" alt="Advertisement" class="ad-image">
-        <button id="close-ad" onclick="closeAd()">Close Ad</button>
-    </div>
-    <!-- Реклама (добавить в конец body) -->
-<div id="ad-container" class="ad-container">
-    <img src="ad-image.png" alt="Реклама" class="ad-image">
-    <button class="close-btn" onclick="closeAd()">Закрыть</button>
-</div>
-
+    <script src="script.js"></script>
 </body>
 </html>
-
-
 
 
 
