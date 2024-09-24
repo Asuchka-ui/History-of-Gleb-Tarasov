@@ -18,7 +18,7 @@
                 <li><a href="biography.html">Биография</a></li>
                 <li><a href="gallery.html">Галерея</a></li>
                 <li><a href="about.html">О нас</a></li>
-                <li><a href="videocall.html">Видеозвонок</a></li>
+                <li><a href="#" onclick="toggleAdditional()">Дополнительно</a></li>
             </ul>
         </nav>
     </header>
@@ -28,9 +28,17 @@
         <p>Мы используем современные технологии для создания удобного интерфейса и полезных функций.</p>
         <p>На сайте доступны разделы с биографией, галереей и информацией о компании.</p>
         <p>Вы можете переключать язык интерфейса на русский или английский.</p>
+        
         <div id="language-switcher">
             <button onclick="switchLanguage('ru')">Русский</button>
             <button onclick="switchLanguage('en')">English</button>
+        </div>
+        
+        <!-- Новый раздел Дополнительно -->
+        <div id="additional-section" style="display: none;">
+            <h2>Дополнительно</h2>
+            <p>Здесь вы можете провести видеозвонок.</p>
+            <a href="videocall.html">Перейти к видеозвонку</a>
         </div>
     </main>
     <footer>
@@ -38,4 +46,3 @@
     </footer>
 </body>
 </html>
-
