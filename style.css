@@ -10,32 +10,33 @@ header {
     background-color: white; /* Белый верх */
     padding: 10px;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column; /* Вертикальная компоновка для мобильных */
+    align-items: flex-start; /* Выровнять элементы влево */
 }
 
 .logo {
     height: 50px; /* Высота логотипа */
 }
 
-nav ul {
+.nav-menu {
     list-style: none;
     padding: 0;
     margin: 0;
     display: flex;
+    flex-wrap: wrap; /* Позволяет пунктам меню занимать несколько строк */
 }
 
-nav ul li {
-    margin-left: 20px;
+.nav-menu li {
+    margin-right: 20px;
 }
 
-nav a {
+.nav-menu a {
     text-decoration: none;
     color: black; /* Черный текст навигации */
 }
 
 .language-switcher {
-    margin-left: 20px;
+    margin-top: 10px; /* Отступ сверху для переключателя языка */
 }
 
 .content {
@@ -47,30 +48,6 @@ footer {
     color: white; /* Белый текст */
     text-align: center;
     padding: 10px 0;
-}
-
-.advertisement {
-    width: 100%; /* Ширина рекламы на всю ширину страницы */
-    height: 50px; /* Высота рекламы */
-    background-image: url('ad-image.png'); /* Фон рекламы */
-    background-size: cover; /* Заставляет изображение заполнять область */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    margin: 0 auto; /* Центрирование рекламы */
-    opacity: 0; /* Начальное состояние - скрыто */
-    animation: slideIn 1s forwards; /* Анимация появления */
-}
-
-@keyframes slideIn {
-    from {
-        transform: translateY(100%); /* Начальное положение за пределами экрана */
-    }
-    to {
-        transform: translateY(0); /* Конечное положение */
-        opacity: 1; /* Полная видимость */
-    }
 }
 
 .biography-content {
@@ -99,4 +76,5 @@ footer {
 .gallery-photo:hover {
     transform: scale(1.1); /* Увеличение при наведении */
 }
+
 
