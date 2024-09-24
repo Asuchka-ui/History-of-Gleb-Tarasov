@@ -34,3 +34,4 @@ function switchLanguage(lang) {
     paragraphs[2].innerText = elements[lang]['sections'];
     paragraphs[3].innerText = elements[lang]['language'];
 }
+
