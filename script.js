@@ -8,22 +8,18 @@ function loadPage(page) {
         })
         .then(data => {
             document.getElementById('content').innerHTML = data;
-            showAdWidget(page); // Показать виджет рекламы после загрузки страницы
+            showAdBanner(page); // Показать рекламный баннер после загрузки страницы
         })
         .catch(error => console.error('Ошибка:', error));
 }
 
-function showAdWidget(page) {
-    const adWidget = document.getElementById('ad-widget');
+function showAdBanner(page) {
+    const adBanner = document.querySelector('.ad-banner');
     // Проверяем, если загруженная страница "info.html"
     if (page === 'info.html') {
-        adWidget.style.display = 'block'; // Показываем виджет
-        setTimeout(() => {
-            adWidget.classList.add('show'); // Добавляем класс для анимации
-        }, 10); // Немного задержки, чтобы увидеть анимацию
+        adBanner.style.display = 'block'; // Показываем рекламный баннер
     } else {
-        adWidget.style.display = 'none'; // Скрываем виджет для других страниц
-        adWidget.classList.remove('show'); // Убираем класс анимации
+        adBanner.style.display = 'none'; // Скрываем рекламный баннер для других страниц
     }
 }
 
