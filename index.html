@@ -4,34 +4,54 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Ваш сайт</title>
+    <script src="script.js" defer></script>
+    <title>Информация</title>
 </head>
 <body>
     <header>
-        <img src="logo.png" alt="Логотип" class="logo">
+        <h1>Название вашего сайта</h1>
         <nav>
-            <ul class="nav-menu">
-                <li><a href="index.html">Информация</a></li>
-                <li><a href="biography.html">Биография</a></li>
-                <li><a href="gallery.html">Галерея</a></li>
-                <li><a href="about.html">О нас</a></li>
-            </ul>
+            <a href="index.html">Информация</a>
+            <a href="biography.html">Биография</a>
+            <a href="gallery.html">Галерея</a>
+            <a href="about.html">О нас</a>
         </nav>
-        <div class="language-switcher">
-            <button onclick="switchLanguage('ru')">Русский</button>
-            <button onclick="switchLanguage('en')">English</button>
-        </div>
     </header>
+    <main>
+        <section>
+            <h2>О сайте</h2>
+            <p>
+                Сайт представляет собой простую и интуитивно понятную платформу, на которой пользователи могут ознакомиться с различной информацией о вас или вашей компании. На сайте присутствуют следующие разделы:
+            </p>
+            <ul>
+                <li><strong>Информация</strong>: Основная страница с приветственным текстом и кратким описанием.</li>
+                <li><strong>Биография</strong>: Раздел, где представлена ваша биография с фотографией и текстом.</li>
+                <li><strong>Галерея</strong>: Здесь можно просмотреть фотографии, каждая из которых открывается на отдельной странице с описанием.</li>
+                <li><strong>О нас</strong>: Страница с подробной информацией о вашей компании или проекте.</li>
+            </ul>
 
-    <div class="content">
-        <h1>Добро пожаловать на наш сайт</h1>
-        <p>Это пример текста для информационной страницы.</p>
-    </div>
+            <h3>Особенности сайта</h3>
+            <ul>
+                <li><strong>Переключатель языков</strong>: Пользователи могут переключаться между русским и английским языками для удобства восприятия информации.</li>
+                <li><strong>Адаптивный дизайн</strong>: Сайт оптимизирован для мобильных устройств, что обеспечивает корректное отображение на экранах разных размеров.</li>
+                <li><strong>Анимации</strong>: В галерее реализованы плавные анимации при наведении на изображения.</li>
+            </ul>
 
+            <h3>Используемые технологии</h3>
+            <ul>
+                <li><strong>HTML</strong>: Структурирование контента сайта.</li>
+                <li><strong>CSS</strong>: Стилизация и оформление внешнего вида страниц, включая адаптивность для мобильных устройств.</li>
+                <li><strong>JavaScript</strong>: Функциональность переключения языков и взаимодействие с пользователем (например, для переключения языка).</li>
+            </ul>
+
+            <h3>Заключение</h3>
+            <p>
+                Сайт предлагает пользователям доступ к информации о вас или вашем проекте в удобном и привлекательном формате, поддерживая основные современные технологии веб-разработки.
+            </p>
+        </section>
+    </main>
     <footer>
-        <p>SHURIX</p>
+        <p style="background-color: black; color: white; text-align: center; padding: 10px;">SHURIX</p>
     </footer>
-
-    <script src="script.js"></script>
 </body>
 </html>
