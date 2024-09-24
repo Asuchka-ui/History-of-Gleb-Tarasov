@@ -28,23 +28,6 @@ nav a {
     text-align: center; /* Центрирование текста */
 }
 
-.biography-container {
-    display: flex;
-    align-items: center; /* Центрирование по вертикали */
-    padding: 20px;
-}
-
-.biography-photo {
-    width: 300px; /* Ширина фото */
-    max-width: 100%; /* Адаптация под экран */
-    border-radius: 10px; /* Закругленные углы */
-    margin-right: 20px; /* Отступ справа от фото */
-}
-
-.biography-text {
-    flex: 1; /* Занимает оставшееся пространство */
-}
-
 .gallery {
     display: grid; /* Используем CSS Grid для отображения */
     grid-template-columns: repeat(2, 1fr); /* Две колонки */
@@ -67,4 +50,5 @@ footer {
     text-align: center;
     padding: 10px 0; /* Отступы в подвале */
 }
+
 
