@@ -28,11 +28,17 @@ nav a {
     text-align: center; /* Центрирование текста */
 }
 
+.biography-content {
+    display: flex; /* Используем flexbox для размещения контента */
+    align-items: center; /* Вертикальное выравнивание */
+    justify-content: center; /* Центрируем содержимое */
+}
+
 .biography-photo {
     width: 100%; /* Ширина 100% от родителя */
-    max-width: 400px; /* Максимальная ширина 400px */
+    max-width: 300px; /* Максимальная ширина 300px */
     border-radius: 10px; /* Закругленные углы */
-    margin: 20px 0; /* Отступ сверху и снизу */
+    margin: 20px; /* Отступы */
 }
 
 .gallery {
@@ -50,12 +56,6 @@ nav a {
 
 .gallery img:hover {
     transform: scale(1.1); /* Увеличение изображения при наведении */
-}
-
-.large-photo {
-    width: 100%; /* Ширина 100% от родителя */
-    max-width: 800px; /* Максимальная ширина для больших фото */
-    border-radius: 10px; /* Закругленные углы */
 }
 
 .about-section {
