@@ -35,10 +35,19 @@ nav a {
 
 .ad-banner {
     width: 100%; /* Ширина на всю страницу */
+    height: 40px; /* Высота рекламного баннера */
     background-color: rgba(255, 255, 255, 0.9); /* Полупрозрачный белый фон */
     padding: 10px;
     text-align: center;
     display: none; /* Скрыто по умолчанию */
+    position: fixed; /* Фиксированное положение */
+    bottom: 0; /* Внизу страницы */
+    left: 0; /* Слева */
+}
+
+.ad-banner img {
+    max-width: 100%; /* Чтобы изображение не выходило за пределы */
+    height: auto; /* Автоматическая высота */
 }
 
 footer {
