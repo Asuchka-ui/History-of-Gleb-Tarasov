@@ -1,10 +1,41 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #000; /* Черный фон */
+    color: #fff; /* Белый текст */
+    margin: 0;
+}
+
+header {
+    background-color: #fff; /* Белый фон для заголовка */
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header img.logo {
+    width: 150px; /* Ширина логотипа */
+}
+
+nav a {
+    margin: 0 15px;
+    color: #000; /* Черный цвет текста в навигации */
+    text-decoration: none;
+}
+
+.container {
+    padding: 20px;
+    text-align: center; /* Центрирование текста */
+}
+
 .biography-container {
     display: flex;
     align-items: center; /* Центрирование по вертикали */
+    padding: 20px;
 }
 
 .biography-photo {
-    width: 400px; /* Ширина фото */
+    width: 300px; /* Ширина фото */
     max-width: 100%; /* Адаптация под экран */
     border-radius: 10px; /* Закругленные углы */
     margin-right: 20px; /* Отступ справа от фото */
@@ -14,4 +45,26 @@
     flex: 1; /* Занимает оставшееся пространство */
 }
 
+.gallery {
+    display: grid; /* Используем CSS Grid для отображения */
+    grid-template-columns: repeat(2, 1fr); /* Две колонки */
+    gap: 20px; /* Отступ между изображениями */
+}
+
+.gallery img {
+    width: 100%; /* Увеличиваем ширину фото в галерее */
+    max-width: 100%; /* Ограничиваем максимальную ширину для изображений в галерее */
+    border-radius: 10px; /* Закругленные углы */
+    transition: transform 0.3s ease; /* Анимация при наведении */
+}
+
+.gallery img:hover {
+    transform: scale(1.1); /* Увеличение изображения при наведении */
+}
+
+footer {
+    background-color: #000; /* Черный фон для подвала */
+    text-align: center;
+    padding: 10px 0; /* Отступы в подвале */
+}
 
