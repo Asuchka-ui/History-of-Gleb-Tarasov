@@ -1,39 +1,69 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Галерея</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <header>
-        <img src="logo.png" alt="Логотип компании" class="logo">
-        <nav>
-            <a href="index.html">Информация</a>
-            <a href="biography.html">Биография</a>
-            <a href="gallery.html">Галерея</a>
-            <a href="#about">О нас</a>
-        </nav>
-    </header>
+body {
+    font-family: Arial, sans-serif;
+    background-color: #000; /* Черный фон */
+    color: #fff; /* Белый текст */
+    margin: 0;
+}
 
-    <div class="container">
-        <h1>Галерея</h1>
-        <div class="gallery">
-            <a href="image1.html"><img src="image1.jpg" alt="Фото 1"><p>Описание фото 1</p></a>
-            <a href="image2.html"><img src="image2.jpg" alt="Фото 2"><p>Описание фото 2</p></a>
-            <a href="image3.html"><img src="image3.jpg" alt="Фото 3"><p>Описание фото 3</p></a>
-            <a href="image4.html"><img src="image4.jpg" alt="Фото 4"><p>Описание фото 4</p></a>
-            <a href="image5.html"><img src="image5.jpg" alt="Фото 5"><p>Описание фото 5</p></a>
-            <a href="image6.html"><img src="image6.jpg" alt="Фото 6"><p>Описание фото 6</p></a>
-        </div>
-    </div>
+header {
+    background-color: #fff; /* Белый фон для заголовка */
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
-    <footer>
-        <p>&copy; 2024 Shurix</p>
-    </footer>
-</body>
-</html>
+header img.logo {
+    width: 150px; /* Ширина логотипа */
+}
 
+nav a {
+    margin: 0 15px;
+    color: #000; /* Черный цвет текста в навигации */
+    text-decoration: none;
+}
 
+.container {
+    padding: 20px;
+    text-align: center; /* Центрирование текста */
+}
 
+.biography-photo {
+    width: 100%; /* Ширина 100% от родителя */
+    max-width: 400px; /* Максимальная ширина 400px */
+    border-radius: 10px; /* Закругленные углы */
+    margin: 20px 0; /* Отступ сверху и снизу */
+}
+
+.gallery {
+    display: grid; /* Используем CSS Grid для отображения */
+    grid-template-columns: repeat(2, 1fr); /* Две колонки */
+    gap: 20px; /* Отступ между изображениями */
+}
+
+.gallery img {
+    width: 100%; /* Увеличиваем ширину фото в галерее */
+    max-width: 300px; /* Устанавливаем максимальную ширину для изображений */
+    border-radius: 10px; /* Закругленные углы */
+    transition: transform 0.3s ease; /* Анимация при наведении */
+}
+
+.gallery img:hover {
+    transform: scale(1.1); /* Увеличение изображения при наведении */
+}
+
+.large-photo {
+    width: 100%; /* Ширина 100% от родителя */
+    max-width: 800px; /* Максимальная ширина для больших фото */
+    border-radius: 10px; /* Закругленные углы */
+}
+
+.about-section {
+    padding: 20px;
+}
+
+footer {
+    background-color: #000; /* Черный фон для подвала */
+    text-align: center;
+    padding: 10px 0; /* Отступы в подвале */
+}
