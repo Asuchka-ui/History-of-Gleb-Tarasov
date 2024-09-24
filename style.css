@@ -12,6 +12,8 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    z-index: 10; /* Чтобы шапка была сверху */
+    position: relative; /* Убедитесь, что она находится на своем месте */
 }
 
 .logo {
@@ -39,10 +41,11 @@ nav a {
     background-color: rgba(255, 255, 255, 0.9); /* Полупрозрачный белый фон */
     padding: 10px;
     text-align: center;
-    display: none; /* Скрыто по умолчанию */
+    display: block; /* Показываем рекламу */
     position: fixed; /* Фиксированное положение */
     bottom: 0; /* Внизу страницы */
     left: 0; /* Слева */
+    z-index: 5; /* Чтобы реклама была ниже шапки */
 }
 
 .ad-banner img {
@@ -55,6 +58,8 @@ footer {
     padding: 20px;
     background-color: #000; /* Черный фон для подвала */
     color: #fff; /* Белый текст */
+    position: relative; /* Убедитесь, что подвал находится на своем месте */
 }
+
 
 
