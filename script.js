@@ -1,3 +1,12 @@
+function toggleAdditional() {
+    const additionalSection = document.getElementById('additional-section');
+    if (additionalSection.style.display === "none") {
+        additionalSection.style.display = "block";
+    } else {
+        additionalSection.style.display = "none";
+    }
+}
+
 function switchLanguage(lang) {
     const elements = {
         'ru': {
