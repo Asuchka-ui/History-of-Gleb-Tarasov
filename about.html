@@ -3,37 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
     <title>О нас</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
     <header>
-        <img src="logo.png" alt="Логотип" class="logo">
+        <div class="logo">
+            <img src="logo.png" alt="Логотип">
+        </div>
         <nav>
-            <ul class="nav-menu">
+            <ul>
                 <li><a href="index.html">Информация</a></li>
                 <li><a href="biography.html">Биография</a></li>
                 <li><a href="gallery.html">Галерея</a></li>
                 <li><a href="about.html">О нас</a></li>
+                <li><a href="#" onclick="toggleAdditional()">Дополнительно</a></li>
             </ul>
         </nav>
-        <div class="language-switcher">
+    </header>
+    <main>
+        <h1>О нас</h1>
+        <p>Здесь размещена информация о нашей команде и проекте.</p>
+
+        <div id="language-switcher">
             <button onclick="switchLanguage('ru')">Русский</button>
             <button onclick="switchLanguage('en')">English</button>
         </div>
-    </header>
 
-    <div class="content">
-        <h1>О нас</h1>
-        <p>Здесь будет информация о нашей компании.</p>
-    </div>
-
+        <div id="additional-section" style="display: none;">
+            <h2>Дополнительно</h2>
+            <ul>
+                <li><a href="videocall.html">Видеозвонок</a></li>
+                <li>Другие опции...</li>
+            </ul>
+        </div>
+    </main>
     <footer>
-        <p>SHURIX</p>
+        <p>© 2024 Shurix. Все права защищены.</p>
     </footer>
-
-    <script src="script.js"></script>
 </body>
 </html>
-
 
