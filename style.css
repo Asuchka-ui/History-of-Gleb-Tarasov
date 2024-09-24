@@ -67,5 +67,40 @@ footer {
     text-align: center;
     padding: 10px 0; /* Отступы в подвале */
 }
+.ad-widget {
+    position: fixed;
+    bottom: -100px; /* Начальное положение ниже экрана */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #fefefe; /* Белый фон */
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    transition: bottom 0.5s ease; /* Анимация для появления */
+}
+
+.ad-widget.show {
+    bottom: 20px; /* Конечное положение */
+}
+
+.ad-image {
+    width: 200px; /* Установите нужный размер изображения */
+    height: auto;
+}
+
+.ad-widget button {
+    margin-top: 10px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.ad-widget button:hover {
+    background-color: #0056b3; /* Более темный синий при наведении */
+}
 
 
