@@ -3,59 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gallery</title>
+    <title>Галерея</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
 </head>
 <body>
     <header>
-        <img src="logo.png" alt="Logo" class="logo">
+        <img src="logo.png" alt="Логотип" class="logo">
         <nav>
             <ul>
-                <li><a href="index.html" data-en="Information" data-ru="Информация">Information</a></li>
-                <li><a href="biography.html" data-en="Biography" data-ru="Биография">Biography</a></li>
-                <li><a href="gallery.html" data-en="Gallery" data-ru="Галерея">Gallery</a></li>
-                <li><a href="about.html" data-en="About Us" data-ru="О нас">About Us</a></li>
+                <li><a href="index.html" data-en="Information" data-ru="Информация">Информация</a></li>
+                <li><a href="biography.html" data-en="Biography" data-ru="Биография">Биография</a></li>
+                <li><a href="gallery.html" data-en="Gallery" data-ru="Галерея">Галерея</a></li>
+                <li><a href="about.html" data-en="About Us" data-ru="О нас">О нас</a></li>
             </ul>
         </nav>
-        <!-- Кнопка переключения языка -->
         <div class="language-switcher">
             <button onclick="setLanguage('en')">EN</button>
             <button onclick="setLanguage('ru')">RU</button>
         </div>
     </header>
 
-    <section class="gallery">
-        <h1 data-en="Gallery" data-ru="Галерея">Gallery</h1>
-        <div class="gallery-row">
-            <div class="gallery-item">
-                <a href="image1.html"><img src="photo1.jpg" alt="Photo 1"></a>
-                <p data-en="Photo 1 Description" data-ru="Описание Фото 1">Photo 1 Description</p>
-            </div>
-            <div class="gallery-item">
-                <a href="image2.html"><img src="photo2.jpg" alt="Photo 2"></a>
-                <p data-en="Photo 2 Description" data-ru="Описание Фото 2">Photo 2 Description</p>
-            </div>
-        </div>
-        <div class="gallery-row">
-            <div class="gallery-item">
-                <a href="image3.html"><img src="photo3.jpg" alt="Photo 3"></a>
-                <p data-en="Photo 3 Description" data-ru="Описание Фото 3">Photo 3 Description</p>
-            </div>
-            <div class="gallery-item">
-                <a href="image4.html"><img src="photo4.jpg" alt="Photo 4"></a>
-                <p data-en="Photo 4 Description" data-ru="Описание Фото 4">Photo 4 Description</p>
-            </div>
-        </div>
-        <div class="gallery-row">
-            <div class="gallery-item">
-                <a href="image5.html"><img src="photo5.jpg" alt="Photo 5"></a>
-                <p data-en="Photo 5 Description" data-ru="Описание Фото 5">Photo 5 Description</p>
-            </div>
-            <div class="gallery-item">
-                <a href="image6.html"><img src="photo6.jpg" alt="Photo 6"></a>
-                <p data-en="Photo 6 Description" data-ru="Описание Фото 6">Photo 6 Description</p>
-            </div>
+    <section class="content">
+        <h1 data-en="Gallery" data-ru="Галерея">Галерея</h1>
+        <div class="gallery">
+            <a href="image1.html"><img src="photo1.jpg" alt="Фото 1" class="gallery-photo"></a>
+            <p>Описание Фото 1</p>
+            <a href="image2.html"><img src="photo2.jpg" alt="Фото 2" class="gallery-photo"></a>
+            <p>Описание Фото 2</p>
+            <a href="image3.html"><img src="photo3.jpg" alt="Фото 3" class="gallery-photo"></a>
+            <p>Описание Фото 3</p>
+            <a href="image4.html"><img src="photo4.jpg" alt="Фото 4" class="gallery-photo"></a>
+            <p>Описание Фото 4</p>
+            <a href="image5.html"><img src="photo5.jpg" alt="Фото 5" class="gallery-photo"></a>
+            <p>Описание Фото 5</p>
+            <a href="image6.html"><img src="photo6.jpg" alt="Фото 6" class="gallery-photo"></a>
+            <p>Описание Фото 6</p>
         </div>
     </section>
 
