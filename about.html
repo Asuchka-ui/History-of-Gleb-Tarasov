@@ -14,24 +14,26 @@
             <a href="biography.html">Биография</a>
             <a href="gallery.html">Галерея</a>
             <a href="about.html">О нас</a>
-            <div class="dropdown">
-                <button class="dropbtn">Дополнительно</button>
-                <div class="dropdown-content">
-                    <a href="extra.html">Видеозвонок</a>
-                </div>
-            </div>
+            <a href="extra.html">Дополнительно</a>
         </div>
     </div>
     <div class="content">
         <h1>О нас</h1>
-        <p>Информация о компании.</p>
-        <div class="language-switch">
-            <button onclick="setLanguage('ru')">Русский</button>
-            <button onclick="setLanguage('en')">English</button>
-        </div>
+        <p>Здесь будет информация о вашем проекте.</p>
+    </div>
+    <div class="language-switch">
+        <label for="language">Выберите язык:</label>
+        <select id="language" onchange="changeLanguage()">
+            <option value="ru">Русский</option>
+            <option value="en">English</option>
+        </select>
+    </div>
+    <div class="footer">
+        &copy; 2024 Ваш Сайт
     </div>
     <script src="script.js"></script>
 </body>
 </html>
+
 
 
