@@ -1,43 +1,25 @@
-/* Стили для галереи */
-.gallery img {
-    width: 45%; /* Уменьшаем ширину картинок */
-    margin: 2%; /* Отступы между изображениями */
-    border-radius: 8px; /* Округляем края */
-    transition: transform 0.3s ease; /* Анимация при наведении */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Добавляем тень */
-}
-
-/* Анимация увеличения при наведении */
-.gallery img:hover {
-    transform: scale(1.05); /* Увеличение при наведении */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); /* Более глубокая тень */
-}
-
-/* Сетка для галереи - 2 изображения в одном ряду */
-.gallery {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
-/* Основной дизайн сайта (если тебе нужен черно-белый интерфейс) */
+/* Основной дизайн сайта (черно-белый интерфейс) */
 body {
     font-family: Arial, sans-serif;
     background-color: #000; /* Черный фон */
     color: #fff; /* Белый текст */
+    margin: 0;
+    padding: 0;
 }
 
-/* Шапка сайта (белый верх) */
+/* Шапка сайта (белая верхняя часть) */
 .header {
-    background-color: #fff; /* Белая верхушка */
-    padding: 10px;
+    background-color: #fff;
+    padding: 20px;
     text-align: center;
     color: #000;
+    position: relative;
 }
 
 /* Логотип */
 .logo {
     float: left;
+    width: 100px;
 }
 
 nav {
@@ -47,15 +29,16 @@ nav {
 
 nav a {
     color: #000;
-    padding: 10px;
+    padding: 10px 15px;
     text-decoration: none;
+    font-weight: bold;
 }
 
 nav a:hover {
     text-decoration: underline;
 }
 
-/* Футер (черный низ) */
+/* Футер (черная нижняя часть) */
 .footer {
     background-color: #000;
     color: #fff;
@@ -66,3 +49,24 @@ nav a:hover {
     width: 100%;
 }
 
+/* Стили для галереи */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.gallery img {
+    width: 30%;
+    margin: 10px;
+    border: 2px solid #fff;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Анимация при наведении */
+.gallery img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2);
+}
