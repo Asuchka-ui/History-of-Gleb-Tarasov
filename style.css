@@ -1,39 +1,50 @@
 body {
-    margin: 0;
     font-family: Arial, sans-serif;
-    background-color: black; /* Черный фон для всей страницы */
-    color: white; /* Белый текст */
+    margin: 0;
+    padding: 0;
 }
 
 .header {
-    background-color: white; /* Белый фон для шапки */
-    display: flex;
-    align-items: center;
+    background-color: white;
     padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid black;
 }
 
 .logo {
-    height: 50px; /* Высота логотипа */
+    height: 50px; /* Подкорректируйте размер логотипа */
 }
 
 .language-switch {
-    margin-left: auto; /* Перемещает переключатель языка вправо */
+    margin-right: 20px;
+}
+
+.nav {
+    display: flex;
 }
 
 .nav a {
-    color: black; /* Черный текст для ссылок */
-    margin: 0 15px;
+    margin: 0 10px;
     text-decoration: none;
+    color: black;
 }
 
 .content {
     padding: 20px;
+    background-color: black;
+    color: white;
 }
 
 .footer {
+    background-color: black;
+    color: white;
     text-align: center;
-    padding: 20px;
-    background-color: black; /* Черный фон для подвала */
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
 }
 
 .gallery {
@@ -41,20 +52,12 @@ body {
     flex-wrap: wrap;
 }
 
-.gallery-photo {
-    width: 100px; /* Уменьшенный размер фото */
-    margin: 5px;
-    transition: transform 0.2s; /* Анимация при наведении */
+.gallery img {
+    width: 150px; /* Уменьшение размера изображений */
+    margin: 10px;
+    transition: transform 0.2s;
 }
 
-.gallery-photo:hover {
-    transform: scale(1.1); /* Увеличение при наведении */
-}
-
-.bio-photo {
-    width: 300px; /* Установка ширины фото в биографии */
-}
-
-.full-image {
-    width: 100%; /* Полная ширина для изображений на отдельных страницах */
+.gallery img:hover {
+    transform: scale(1.1); /* Эффект увеличения при наведении */
 }
