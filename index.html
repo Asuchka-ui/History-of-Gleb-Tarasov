@@ -3,97 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Мой стильный сайт</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <style>
-        /* Общие стили для всего сайта */
-        body {
-            font-family: 'Roboto', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #000; /* Черный фон */
-            color: #fff; /* Белый текст */
-        }
-
-        /* Шапка */
-        header {
-            background-color: #fff; /* Белый фон шапки */
-            color: #000; /* Черный текст */
-            padding: 10px 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        header img {
-            width: 150px; /* Ширина логотипа */
-        }
-
-        /* Основная часть */
-        .container {
-            display: flex; /* Используем flexbox для размещения элементов */
-            padding: 20px;
-        }
-
-        .content {
-            flex: 1; /* Занимает оставшееся пространство */
-            padding-right: 20px; /* Отступ справа */
-        }
-
-        .photo-container {
-            position: relative; /* Позволяет использовать абсолютное позиционирование для текста */
-            width: 300px; /* Ширина фото */
-            margin-left: 20px; /* Отступ слева от фото */
-        }
-
-        .photo-container img {
-            width: 100%; /* Изображение занимает всю ширину контейнера */
-            border-radius: 10px; /* Закругленные углы */
-            transition: transform 0.3s ease; /* Анимация при наведении */
-        }
-
-        .photo-container img:hover {
-            transform: scale(1.1); /* Увеличение изображения при наведении */
-        }
-
-        .text-container {
-            margin-top: 10px; /* Отступ сверху для текста */
-        }
-
-        /* Нижний колонтитул */
-        footer {
-            background-color: #fff; /* Белый фон подвала */
-            color: #000; /* Черный текст */
-            text-align: center;
-            padding: 10px;
-            position: relative;
-            bottom: 0;
-            width: 100%;
-        }
-    </style>
+    <title>Главная страница</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <img src="logo.png" alt="Логотип моей компании"> <!-- Замените на имя вашего логотипа -->
+        <img src="logo.png" alt="Логотип компании">
+        <nav>
+            <a href="index.html">Информация</a>
+            <a href="biography.html">Биография</a>
+            <a href="gallery.html">Галерея</a>
+            <a href="#about">О нас</a>
+        </nav>
     </header>
 
     <div class="container">
-        <div class="content">
-            <h1>Название сайта</h1>
-            <p>Здесь будет описание вашего сайта или компании. Вы можете добавить любую информацию, которую считаете нужной, чтобы рассказать о своем проекте.</p>
-        </div>
-        
-        <div class="photo-container">
-            <img src="photo.jpg" alt="Фотография"> <!-- Замените на имя вашего фото -->
-            <div class="text-container">
-                <p>Здесь можно добавить текст, который будет справа от фотографии.</p>
-            </div>
-        </div>
+        <h1>Информация о сайте</h1>
+        <p>Здесь будет основная информация о проекте.</p>
     </div>
 
     <footer>
-        <p>&copy; 2024 SHURIX</p>
+        <p>&copy; 2024 Shurix</p>
     </footer>
 </body>
 </html>
-
