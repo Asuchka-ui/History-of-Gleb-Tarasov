@@ -1,17 +1,5 @@
 function loadPage(page) {
     fetch(page)
-        .then(response => response.text())
-        .then(data => {
-            document.getElementById('content').innerHTML = data;
-        })
-        .catch(error => console.error('Ошибка:', error));
-}
-
-document.addEventListener("DOMContentLoaded", function() {
-    loadPage('info.html'); // Загружаем страницу по умолчанию
-});
-function loadPage(page) {
-    fetch(page)
         .then(response => {
             if (!response.ok) {
                 throw new Error('Сеть не ответила: ' + response.statusText);
@@ -50,4 +38,5 @@ function closeAdWidget() {
 document.addEventListener("DOMContentLoaded", function() {
     loadPage('info.html'); // Загружаем страницу по умолчанию
 });
+
 
