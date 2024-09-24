@@ -14,33 +14,30 @@
             <a href="biography.html">Биография</a>
             <a href="gallery.html">Галерея</a>
             <a href="about.html">О нас</a>
-            <div class="dropdown">
-                <button class="dropbtn">Дополнительно</button>
-                <div class="dropdown-content">
-                    <a href="extra.html">Видеозвонок</a>
-                </div>
-            </div>
+            <a href="extra.html">Дополнительно</a>
         </div>
     </div>
     <div class="content">
         <h1>Галерея</h1>
         <div class="gallery">
-            <img src="image1.jpg" alt="Изображение 1" class="gallery-photo">
-            <img src="image2.jpg" alt="Изображение 2" class="gallery-photo">
-            <img src="image3.jpg" alt="Изображение 3" class="gallery-photo">
-            <img src="image4.jpg" alt="Изображение 4" class="gallery-photo">
-            <img src="image5.jpg" alt="Изображение 5" class="gallery-photo">
-            <img src="image6.jpg" alt="Изображение 6" class="gallery-photo">
+            <img src="image1.jpg" alt="Фото 1" class="gallery-image">
+            <img src="image2.jpg" alt="Фото 2" class="gallery-image">
+            <img src="image3.jpg" alt="Фото 3" class="gallery-image">
+            <img src="image4.jpg" alt="Фото 4" class="gallery-image">
+            <img src="image5.jpg" alt="Фото 5" class="gallery-image">
+            <img src="image6.jpg" alt="Фото 6" class="gallery-image">
         </div>
-        <div class="language-switch">
-            <button onclick="setLanguage('ru')">Русский</button>
-            <button onclick="setLanguage('en')">English</button>
-        </div>
+    </div>
+    <div class="language-switch">
+        <label for="language">Выберите язык:</label>
+        <select id="language" onchange="changeLanguage()">
+            <option value="ru">Русский</option>
+            <option value="en">English</option>
+        </select>
+    </div>
+    <div class="footer">
+        &copy; 2024 Ваш Сайт
     </div>
     <script src="script.js"></script>
 </body>
 </html>
-
-
-
-
