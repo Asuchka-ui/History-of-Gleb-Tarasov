@@ -18,27 +18,18 @@
                 <li><a href="biography.html">Биография</a></li>
                 <li><a href="gallery.html">Галерея</a></li>
                 <li><a href="about.html">О нас</a></li>
-                <li><a href="videocall.html">Видеозвонок</a></li> <!-- Новая ссылка на видеозвонок -->
+                <li><a href="#" onclick="toggleAdditional()">Дополнительно</a></li>
             </ul>
         </nav>
     </header>
     <main>
         <h1>Видеозвонок</h1>
-        <video id="video" autoplay></video>
-        <button id="startButton">Начать видеозвонок</button>
+        <p>Эта страница предназначена для видеозвонков. Подключите вашу камеру для использования функции видеозвонка.</p>
+        <!-- Здесь можно добавить код для видеозвонка -->
     </main>
     <footer>
         <p>© 2024 Shurix. Все права защищены.</p>
     </footer>
-
-    <script>
-        const video = document.getElementById('video');
-        const startButton = document.getElementById('startButton');
-
-        startButton.addEventListener('click', async () => {
-            const stream = await navigator.mediaDevices.getUserMedia({ video: true });
-            video.srcObject = stream;
-        });
-    </script>
 </body>
 </html>
+
