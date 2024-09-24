@@ -7,39 +7,40 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-    <!-- Шапка сайта -->
     <div class="header">
-        <div class="logo">
-            <img src="logo.png" alt="Логотип">
-        </div>
-        <nav>
+        <img src="logo.png" alt="Логотип" class="logo">
+        <div class="nav">
             <a href="index.html">Информация</a>
             <a href="biography.html">Биография</a>
             <a href="gallery.html">Галерея</a>
             <a href="about.html">О нас</a>
-            <a href="extra.html">Дополнительно</a>
-        </nav>
+            <div class="dropdown">
+                <button class="dropbtn">Дополнительно</button>
+                <div class="dropdown-content">
+                    <a href="extra.html">Видеозвонок</a>
+                </div>
+            </div>
+        </div>
     </div>
-
-    <!-- Галерея -->
-    <h1 class="section-title">Галерея</h1>
-    <div class="gallery">
-        <img src="image1.jpg" alt="Фото 1">
-        <img src="image2.jpg" alt="Фото 2">
-        <img src="image3.jpg" alt="Фото 3">
-        <img src="image4.jpg" alt="Фото 4">
-        <img src="image5.jpg" alt="Фото 5">
-        <img src="image6.jpg" alt="Фото 6">
+    <div class="content">
+        <h1>Галерея</h1>
+        <div class="gallery">
+            <img src="image1.jpg" alt="Изображение 1" class="gallery-photo">
+            <img src="image2.jpg" alt="Изображение 2" class="gallery-photo">
+            <img src="image3.jpg" alt="Изображение 3" class="gallery-photo">
+            <img src="image4.jpg" alt="Изображение 4" class="gallery-photo">
+            <img src="image5.jpg" alt="Изображение 5" class="gallery-photo">
+            <img src="image6.jpg" alt="Изображение 6" class="gallery-photo">
+        </div>
+        <div class="language-switch">
+            <button onclick="setLanguage('ru')">Русский</button>
+            <button onclick="setLanguage('en')">English</button>
+        </div>
     </div>
-
-    <!-- Футер -->
-    <div class="footer">
-        <p>© 2024 SHURIX</p>
-    </div>
-
+    <script src="script.js"></script>
 </body>
 </html>
+
 
 
 
