@@ -2,83 +2,93 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #000; /* Черный фон */
-    color: #fff; /* Белый текст */
 }
 
-.header {
-    background-color: #fff; /* Белый фон для шапки */
-    padding: 10px;
+header {
+    background-color: white;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    z-index: 10; /* Чтобы шапка была сверху */
-    position: relative; /* Убедитесь, что она находится на своем месте */
+    padding: 10px 20px;
+    position: relative;
 }
 
-.logo {
-    width: 100px; /* Ширина логотипа */
+.logo img {
+    height: 50px; /* Размер логотипа */
 }
 
 nav ul {
     list-style-type: none;
+    margin: 0;
     padding: 0;
+    display: flex;
 }
 
 nav ul li {
-    display: inline;
-    margin: 0 15px;
+    margin-left: 20px;
 }
 
-nav a {
+nav ul li a {
     text-decoration: none;
-    color: #000; /* Черный цвет текста */
+    color: black; /* Цвет ссылок */
 }
 
-.ad-banner {
-    width: 100%; /* Ширина на всю страницу */
-    height: 40px; /* Высота рекламного баннера */
-    background-color: rgba(255, 255, 255, 0.9); /* Полупрозрачный белый фон */
-    padding: 10px;
-    text-align: center;
-    display: block; /* Показываем рекламу */
-    position: fixed; /* Фиксированное положение */
-    bottom: 0; /* Внизу страницы */
-    left: 0; /* Слева */
-    z-index: 5; /* Чтобы реклама была ниже шапки */
-}
-
-.ad-banner img {
-    max-width: 100%; /* Чтобы изображение не выходило за пределы */
-    height: auto; /* Автоматическая высота */
-}
-
-.biography-content {
-    display: flex; /* Используем флекс для размещения фото и текста */
-    margin: 20px; /* Отступы */
-}
-
-.biography-photo {
-    max-width: 200px; /* Ограничиваем ширину фото */
-    margin-right: 20px; /* Отступ между фото и текстом */
-}
-
-.gallery {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Две картинки в ряд */
-    gap: 10px; /* Пробел между картинками */
-    margin: 20px; /* Отступы */
-}
-
-.gallery-photo {
-    max-width: 100%; /* Ограничиваем ширину картинок */
-    height: auto; /* Автоматическая высота */
+main {
+    background-color: black;
+    color: white; /* Цвет текста */
+    padding: 20px;
 }
 
 footer {
+    background-color: black;
+    color: white;
     text-align: center;
-    padding: 20px;
-    background-color: #000; /* Черный фон для подвала */
-    color: #fff; /* Белый текст */
+    padding: 10px 0;
+    position: relative;
+}
+
+.gallery-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.gallery-photo {
+    width: 30%; /* Измените ширину по вашему усмотрению */
+    margin: 10px;
+}
+
+.biography-content {
+    display: flex;
+}
+
+.biography-photo {
+    width: 50%; /* Ширина фотографии в биографии */
+    margin-right: 20px;
+}
+
+.ad-banner {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 10px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 40px;
+    display: none; /* Скрываем по умолчанию */
+    z-index: 5; /* Чтобы реклама была выше контента */
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    position: absolute;
+    right: 10px;
+    top: 5px;
+}
+
 }
 
