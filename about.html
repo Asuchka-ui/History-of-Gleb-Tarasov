@@ -7,32 +7,30 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-    <!-- Шапка сайта -->
     <div class="header">
-        <div class="logo">
-            <img src="logo.png" alt="Логотип">
-        </div>
-        <nav>
+        <img src="logo.png" alt="Логотип" class="logo">
+        <div class="nav">
             <a href="index.html">Информация</a>
             <a href="biography.html">Биография</a>
             <a href="gallery.html">Галерея</a>
             <a href="about.html">О нас</a>
-            <a href="extra.html">Дополнительно</a>
-        </nav>
+            <div class="dropdown">
+                <button class="dropbtn">Дополнительно</button>
+                <div class="dropdown-content">
+                    <a href="extra.html">Видеозвонок</a>
+                </div>
+            </div>
+        </div>
     </div>
-
-    <!-- Основной контент -->
-    <main>
-        <h1 class="section-title">О нас</h1>
-        <p>Здесь можно разместить информацию о вашей компании или проекте.</p>
-    </main>
-
-    <!-- Футер -->
-    <div class="footer">
-        <p>© 2024 SHURIX</p>
+    <div class="content">
+        <h1>О нас</h1>
+        <p>Информация о компании.</p>
+        <div class="language-switch">
+            <button onclick="setLanguage('ru')">Русский</button>
+            <button onclick="setLanguage('en')">English</button>
+        </div>
     </div>
-
+    <script src="script.js"></script>
 </body>
 </html>
 
