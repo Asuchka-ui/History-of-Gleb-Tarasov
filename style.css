@@ -1,72 +1,38 @@
 body {
     font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
     background-color: #000; /* Черный фон */
     color: #fff; /* Белый текст */
-    margin: 0;
 }
 
-header {
-    background-color: #fff; /* Белый фон для заголовка */
+.header {
+    background-color: #fff; /* Белый фон для шапки */
     padding: 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-header img.logo {
-    width: 150px; /* Ширина логотипа */
+.logo {
+    width: 100px; /* Ширина логотипа */
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
 }
 
 nav a {
-    margin: 0 15px;
-    color: #000; /* Черный цвет текста в навигации */
     text-decoration: none;
+    color: #000; /* Черный цвет текста */
 }
 
-.container {
-    padding: 20px;
-    text-align: center; /* Центрирование текста */
-}
-
-.biography-content {
-    display: flex; /* Используем flexbox для размещения контента */
-    align-items: center; /* Вертикальное выравнивание */
-    justify-content: center; /* Центрируем содержимое */
-}
-
-.biography-photo {
-    width: 100%; /* Ширина 100% от родителя */
-    max-width: 200px; /* Максимальная ширина 200px */
-    border-radius: 10px; /* Закругленные углы */
-    margin-right: 20px; /* Отступы справа */
-}
-
-.biography-content p {
-    max-width: 500px; /* Максимальная ширина текста */
-}
-
-.gallery {
-    display: grid; /* Используем CSS Grid для отображения */
-    grid-template-columns: repeat(2, 1fr); /* Две колонки */
-    gap: 20px; /* Отступ между изображениями */
-}
-
-.gallery img {
-    width: 100%; /* Увеличиваем ширину фото в галерее */
-    max-width: 250px; /* Устанавливаем максимальную ширину для изображений */
-    border-radius: 10px; /* Закругленные углы */
-    transition: transform 0.3s ease; /* Анимация при наведении */
-}
-
-.gallery img:hover {
-    transform: scale(1.1); /* Увеличение изображения при наведении */
-}
-
-footer {
-    background-color: #000; /* Черный фон для подвала */
-    text-align: center;
-    padding: 10px 0; /* Отступы в подвале */
-}
 .ad-widget {
     position: fixed;
     bottom: -100px; /* Начальное положение ниже экрана */
@@ -102,5 +68,13 @@ footer {
 .ad-widget button:hover {
     background-color: #0056b3; /* Более темный синий при наведении */
 }
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #000; /* Черный фон для подвала */
+    color: #fff; /* Белый текст */
+}
+
 
 
