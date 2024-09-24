@@ -1,32 +1,46 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Фото 1</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
+    <title>Image 1</title>
 </head>
 <body>
     <header>
-        <img src="logo.png" alt="Логотип компании" class="logo">
+        <div class="logo">
+            <img src="logo.png" alt="Logo">
+        </div>
         <nav>
-            <a href="index.html">Информация</a>
-            <a href="biography.html">Биография</a>
-            <a href="gallery.html">Галерея</a>
-            <a href="#about">О нас</a>
+            <ul>
+                <li><a href="info.html">Информация</a></li>
+                <li><a href="biography.html">Биография</a></li>
+                <li><a href="gallery.html">Галерея</a></li>
+                <li><a href="#about">О нас</a></li>
+            </ul>
         </nav>
     </header>
 
-    <div class="container">
-        <h1>Фото 1</h1>
-        <img src="image2.jpg" alt="Фото 2" class="large-photo">
-        <p>Здесь будет текст, который ты добавишь.</p>
-    </div>
+    <main>
+        <section>
+            <h1>Изображение 1</h1>
+            <img src="image2.jpg" alt="Image 2" style="width: 100%; height: auto;">
+            <p>Описание изображения 1.</p>
+        </section>
+    </main>
 
     <footer>
-        <p>&copy; 2024 Shurix</p>
+        <p>&copy; Shurix</p>
     </footer>
+
+    <div class="ad-banner">
+        <img src="advertisement.png" alt="Advertisement">
+        <button class="close-btn">×</button>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
+
 
 
