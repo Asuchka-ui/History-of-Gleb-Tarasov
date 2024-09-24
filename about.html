@@ -3,36 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
+    <title>О нас</title>
 </head>
 <body>
     <header>
-        <img src="logo.png" alt="Logo" class="logo">
+        <img src="logo.png" alt="Логотип" class="logo">
         <nav>
-            <ul>
-                <li><a href="index.html" data-en="Information" data-ru="Информация">Information</a></li>
-                <li><a href="biography.html" data-en="Biography" data-ru="Биография">Biography</a></li>
-                <li><a href="gallery.html" data-en="Gallery" data-ru="Галерея">Gallery</a></li>
-                <li><a href="about.html" data-en="About Us" data-ru="О нас">About Us</a></li>
+            <ul class="nav-menu">
+                <li><a href="index.html">Информация</a></li>
+                <li><a href="biography.html">Биография</a></li>
+                <li><a href="gallery.html">Галерея</a></li>
+                <li><a href="about.html">О нас</a></li>
             </ul>
         </nav>
-        <!-- Кнопка переключения языка -->
         <div class="language-switcher">
-            <button onclick="setLanguage('en')">EN</button>
-            <button onclick="setLanguage('ru')">RU</button>
+            <button onclick="switchLanguage('ru')">Русский</button>
+            <button onclick="switchLanguage('en')">English</button>
         </div>
     </header>
 
-    <section class="content">
-        <h1 data-en="About Us" data-ru="О нас">About Us</h1>
-        <p data-en="We are an organization that..." data-ru="Мы организация, которая...">We are an organization that...</p>
-    </section>
+    <div class="content">
+        <h1>О нас</h1>
+        <p>Здесь будет информация о нашей компании.</p>
+    </div>
 
     <footer>
-        <p class="watermark">SHURIX</p>
+        <p>SHURIX</p>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
+
 
