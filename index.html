@@ -3,73 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Главная</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Доступ к Камере</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            flex-direction: column;
+        }
+        #video-container {
+            width: 300px; /* Ширина окна для видео */
+            height: 200px; /* Высота окна для видео */
+            overflow: hidden; /* Скрыть излишки видео */
+            border: 2px solid black; /* Граница вокруг окна */
+            position: relative;
+        }
+        video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: auto;
+            height: 100%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
 </head>
 <body>
-
-    <!-- Шапка сайта -->
-    <div class="header">
-        <div class="logo">
-            <img src="logo.png" alt="Логотип">
-        </div>
-        <nav>
-            <a href="index.html">Информация</a>
-            <a href="biography.html">Биография</a>
-            <a href="gallery.html">Галерея</a>
-            <a href="about.html">О нас</a>
-            <a href="#" id="open-modal">Дополнительно</a>
-        </nav>
-    </div>
-
-    <!-- Основной контент -->
-    <main>
-        <h1 class="section-title">Добро пожаловать на наш сайт!</h1>
-        <p>Здесь вы найдете полезную информацию о нас, нашу биографию, галерею и многое другое.</p>
-    </main>
-
-    <!-- Модальное окно -->
-    <div id="modal" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <h2>Дополнительные возможности</h2>
-            <p>Здесь можно добавить новые функции, например, видеозвонки, чат или другую информацию.</p>
-        </div>
-    </div>
-
-    <!-- Футер -->
-    <div class="footer">
-        <p>© 2024 SHURIX</p>
+    <h1>Доступ к Камере</h1>
+    <button id="start-camera">Запустить Камеру</button>
+    <div id="video-container">
+        <video id="video" autoplay></video>
     </div>
 
     <script>
-        // Получаем модальное окно
-        var modal = document.getElementById("modal");
+        const video = document.getElementById('video');
+        const startCameraButton = document.getElementById('start-camera');
 
-        // Получаем кнопку, которая открывает модальное окно
-        var btn = document.getElementById("open-modal");
-
-        // Получаем элемент <span>, который закрывает модальное окно
-        var span = document.getElementsByClassName("close")[0];
-
-        // Когда пользователь нажимает на кнопку, открыть модальное окно
-        btn.onclick = function() {
-            modal.style.display = "block";
-        }
-
-        // Когда пользователь нажимает на <span> (x), закрыть модальное окно
-        span.onclick = function() {
-            modal.style.display = "none";
-        }
-
-        // Когда пользователь кликает в любом месте за пределами модального окна, оно закрывается
-        window.onclick = function(event) {
-            if (event.target == modal) {
-                modal.style.display = "none";
+        startCameraButton.addEventListener('click', async () => {
+            try {
+                // Запрашиваем доступ к камере
+                const stream = await navigator.mediaDevices.getUserMedia({ video: true });
+                // Присоединяем поток к видео элементу
+                video.srcObject = stream;
+            } catch (error) {
+                console.error('Ошибка доступа к камере:', error);
             }
-        }
+        });
     </script>
-
 </body>
 </html>
 
