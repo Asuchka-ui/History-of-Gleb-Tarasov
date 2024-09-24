@@ -18,7 +18,7 @@
             <a href="biography.html">Биография</a>
             <a href="gallery.html">Галерея</a>
             <a href="about.html">О нас</a>
-            <a href="extra.html">Дополнительно</a>
+            <a href="#" id="open-modal">Дополнительно</a>
         </nav>
     </div>
 
@@ -28,10 +28,47 @@
         <p>Здесь вы найдете полезную информацию о нас, нашу биографию, галерею и многое другое.</p>
     </main>
 
+    <!-- Модальное окно -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Дополнительные возможности</h2>
+            <p>Здесь можно добавить новые функции, например, видеозвонки, чат или другую информацию.</p>
+        </div>
+    </div>
+
     <!-- Футер -->
     <div class="footer">
         <p>© 2024 SHURIX</p>
     </div>
+
+    <script>
+        // Получаем модальное окно
+        var modal = document.getElementById("modal");
+
+        // Получаем кнопку, которая открывает модальное окно
+        var btn = document.getElementById("open-modal");
+
+        // Получаем элемент <span>, который закрывает модальное окно
+        var span = document.getElementsByClassName("close")[0];
+
+        // Когда пользователь нажимает на кнопку, открыть модальное окно
+        btn.onclick = function() {
+            modal.style.display = "block";
+        }
+
+        // Когда пользователь нажимает на <span> (x), закрыть модальное окно
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        // Когда пользователь кликает в любом месте за пределами модального окна, оно закрывается
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
 
 </body>
 </html>
