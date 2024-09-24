@@ -3,12 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Website</title>
+    <title>Your Website Title</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <img src="logo.png" alt="Logo" class="logo">
+        <div class="logo">
+            <img src="logo.png" alt="Logo" id="logo">
+        </div>
         <nav>
             <ul>
                 <li><a href="info.html">Информация</a></li>
@@ -18,25 +20,23 @@
             </ul>
         </nav>
     </header>
-
     <main>
-        <h1>Добро пожаловать на мой сайт!</h1>
-        <p>Это пример текста на главной странице.</p>
+        <h1>Добро пожаловать на сайт!</h1>
+        <p>Это ваш сайт, на котором вы можете добавлять информацию.</p>
     </main>
+    
+    <div class="ad-banner">
+        <button class="close-btn">&times;</button>
+        <img src="advertisement.png" alt="Advertisement" class="ad-image">
+    </div>
 
     <footer>
         <p>Shurix</p>
     </footer>
 
-    <div class="ad-banner">
-        <img src="advertisement.png" alt="Advertisement" style="width: 100%; height: auto;">
-        <button class="close-btn">&times;</button>
-    </div>
-
     <script src="script.js"></script>
 </body>
 </html>
-
 
 
 
