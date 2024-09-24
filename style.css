@@ -1,86 +1,88 @@
 body {
-    font-family: Arial, sans-serif;
     margin: 0;
-    padding: 0;
-    background-color: black; /* Черный фон для основной части сайта */
-    color: white; /* Цвет текста */
+    font-family: Arial, sans-serif;
+    background-color: black; /* Черный фон для основной части */
+    color: white; /* Белый цвет текста */
 }
 
 header {
-    background-color: white; /* Белый фон для верхней части */
     display: flex;
     justify-content: space-between;
-    padding: 10px 20px;
+    align-items: center;
+    background-color: white; /* Белый фон для шапки */
+    padding: 10px;
 }
 
-header .logo {
-    width: 150px; /* Ширина логотипа */
+.logo img {
+    height: 50px; /* Высота логотипа */
 }
 
 nav ul {
     list-style-type: none;
+    margin: 0;
     padding: 0;
+    display: flex;
 }
 
 nav ul li {
-    display: inline;
     margin-left: 20px;
 }
 
 nav ul li a {
     text-decoration: none;
-    color: black; /* Черный цвет ссылок */
+    color: black; /* Черный цвет текста в навигации */
 }
 
-footer {
-    background-color: black;
-    color: white;
-    text-align: center;
-    padding: 10px 0;
-    position: relative;
+main {
+    padding: 20px;
 }
 
-.gallery-container {
+.gallery {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
 }
 
-.gallery-photo {
-    width: 48%; /* Размер фотографий в галерее */
-    margin-bottom: 10px;
+.gallery-image {
+    width: 48%; /* Ширина изображений в галерее (два в ряду) */
+    margin: 1%; /* Отступы между изображениями */
 }
 
 .biography-content {
     display: flex;
-    align-items: center; /* Выравнивание элементов по центру */
 }
 
 .biography-photo {
     width: 200px; /* Размер фотографии в биографии */
-    margin-right: 20px; /* Отступ справа от фотографии */
+    margin-right: 20px; /* Отступ от текста */
 }
 
 .ad-banner {
     position: fixed;
     bottom: 0;
     left: 0;
-    width: 100%;
-    background-color: rgba(255, 255, 255, 0.9); /* Полупрозрачный белый фон для рекламы */
-    text-align: center;
-    display: none; /* Скрыто по умолчанию */
-    z-index: 1000; /* Убедитесь, что баннер выше других элементов */
+    right: 0;
+    background-color: rgba(255, 255, 255, 0.9); /* Полупрозрачный белый фон */
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.ad-image {
+    width: 100%; /* Растягиваем изображение на всю ширину */
+    height: auto; /* Авто-высота для сохранения пропорций */
 }
 
 .close-btn {
-    background-color: transparent;
-    border: none;
-    font-size: 24px;
-    color: black; /* Цвет кнопки закрытия */
-    cursor: pointer;
     position: absolute;
     top: 5px;
     right: 10px;
+    background: transparent;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
 }
+
 
 
