@@ -1,31 +1,51 @@
 body {
-    font-family: Arial, sans-serif;
     margin: 0;
-    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #000; /* черный фон для всего тела */
+    color: #fff; /* белый текст */
 }
 
 .header {
-    background-color: white;
-    padding: 20px;
-    text-align: center;
-    position: relative;
+    background-color: #fff; /* белый фон для заголовка */
+    padding: 10px; /* уменьшенное значение для уменьшения высоты */
+    display: flex;
+    align-items: center; /* центрирование содержимого по вертикали */
 }
 
 .logo {
-    max-width: 100%;
-    height: auto;
+    height: 40px; /* уменьшите высоту логотипа */
+    margin-right: 20px; /* отступ между логотипом и навигацией */
 }
 
 .nav {
     display: flex;
-    justify-content: center;
-    margin-top: 10px;
+    flex-grow: 1; /* позволяет навигации занимать доступное пространство */
+    justify-content: flex-end; /* выравнивание ссылок вправо */
 }
 
 .nav a {
-    margin: 0 15px;
-    text-decoration: none;
-    color: black;
+    color: #000; /* черный текст для ссылок */
+    text-decoration: none; /* убираем подчеркивание */
+    margin-left: 15px; /* отступ между ссылками */
+}
+
+.content {
+    padding: 20px; /* отступ для содержимого */
+}
+
+.language-switch {
+    margin-top: 20px; /* отступ сверху для переключателя языков */
+}
+
+.footer {
+    background-color: #000; /* черный фон для подвала */
+    color: #fff; /* белый текст */
+    text-align: center; /* центрирование текста */
+    padding: 10px; /* отступ внутри подвала */
+    position: fixed; /* фиксируем подвал внизу */
+    bottom: 0; /* прижимаем к низу */
+    left: 0;
+    right: 0; /* растягиваем на всю ширину */
 }
 
 .dropdown {
@@ -36,50 +56,12 @@ body {
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: white;
+    background-color: #f9f9f9;
     min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
 }
 
 .dropdown:hover .dropdown-content {
     display: block;
-}
-
-.content {
-    background-color: black;
-    color: white;
-    padding: 20px;
-}
-
-.biography-section {
-    display: flex;
-    align-items: center;
-}
-
-.bio-photo {
-    max-width: 150px; /* Уменьшение размера фото в биографии */
-    height: auto;
-    margin-right: 20px;
-}
-
-.gallery {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
-
-.gallery-photo {
-    width: 30%; /* Размер фотографий в галерее */
-    margin: 10px;
-    transition: transform 0.3s; /* Анимация при наведении */
-}
-
-.gallery-photo:hover {
-    transform: scale(1.05); /* Увеличение при наведении */
-}
-
-.language-switch {
-    text-align: center;
-    margin-top: 20px;
 }
 
