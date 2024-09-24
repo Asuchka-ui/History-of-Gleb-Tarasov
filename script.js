@@ -18,6 +18,8 @@ const translations = {
         aboutTitle: "О нас",
         additionalTitle: "Дополнительно",
         languageLabel: "Выберите язык:",
+        welcomeText: "Здесь вы найдете информацию о нашем проекте.",
+        exampleText: "Это пример сайта с несколькими страницами."
         // Добавьте другие переводы по мере необходимости
     },
     en: {
@@ -27,6 +29,8 @@ const translations = {
         aboutTitle: "About Us",
         additionalTitle: "Additional",
         languageLabel: "Select language:",
+        welcomeText: "Here you will find information about our project.",
+        exampleText: "This is an example of a website with several pages."
         // Добавьте другие переводы по мере необходимости
     }
 };
