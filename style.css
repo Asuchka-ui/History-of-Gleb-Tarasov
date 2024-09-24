@@ -53,13 +53,32 @@ nav a {
     height: auto; /* Автоматическая высота */
 }
 
+.biography-content {
+    display: flex; /* Используем флекс для размещения фото и текста */
+    margin: 20px; /* Отступы */
+}
+
+.biography-photo {
+    max-width: 200px; /* Ограничиваем ширину фото */
+    margin-right: 20px; /* Отступ между фото и текстом */
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Две картинки в ряд */
+    gap: 10px; /* Пробел между картинками */
+    margin: 20px; /* Отступы */
+}
+
+.gallery-photo {
+    max-width: 100%; /* Ограничиваем ширину картинок */
+    height: auto; /* Автоматическая высота */
+}
+
 footer {
     text-align: center;
     padding: 20px;
     background-color: #000; /* Черный фон для подвала */
     color: #fff; /* Белый текст */
-    position: relative; /* Убедитесь, что подвал находится на своем месте */
 }
-
-
 
