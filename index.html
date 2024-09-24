@@ -3,54 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Доступ к Камере</title>
-    <style>
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: #f0f0f0;
-            flex-direction: column;
-        }
-        #video-container {
-            width: 300px; /* Ширина окна для видео */
-            height: 200px; /* Высота окна для видео */
-            overflow: hidden; /* Скрыть излишки видео */
-            border: 2px solid black; /* Граница вокруг окна */
-            position: relative;
-        }
-        video {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: auto;
-            height: 100%;
-            transform: translate(-50%, -50%);
-        }
-    </style>
+    <title>Shurix Website</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
-    <h1>Доступ к Камере</h1>
-    <button id="start-camera">Запустить Камеру</button>
-    <div id="video-container">
-        <video id="video" autoplay></video>
-    </div>
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="Логотип" />
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Информация</a></li>
+                <li><a href="biography.html">Биография</a></li>
+                <li><a href="gallery.html">Галерея</a></li>
+                <li><a href="about.html">О нас</a></li>
+                <li><a href="videocall.html">Видеозвонок</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <script>
-        const video = document.getElementById('video');
-        const startCameraButton = document.getElementById('start-camera');
+    <main>
+        <h1>Добро пожаловать на наш сайт!</h1>
+        <p>Этот сайт создан для демонстрации различных возможностей веб-разработки.</p>
+        <p>Здесь вы найдете информацию о нашем проекте, биографию, галерею изображений и возможность провести видеозвонок.</p>
+        
+        <h2>Переключатель языка</h2>
+        <button id="language-toggle">Сменить язык</button>
+    </main>
 
-        startCameraButton.addEventListener('click', async () => {
-            try {
-                // Запрашиваем доступ к камере
-                const stream = await navigator.mediaDevices.getUserMedia({ video: true });
-                // Присоединяем поток к видео элементу
-                video.srcObject = stream;
-            } catch (error) {
-                console.error('Ошибка доступа к камере:', error);
-            }
-        });
-    </script>
+    <footer>
+        <p>SHURIX</p>
+    </footer>
 </body>
 </html>
