@@ -4,37 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
-    <title>Информация</title>
+    <title>Ваш сайт</title>
 </head>
 <body>
     <header>
-        <h1>Название вашего сайта</h1>
+        <img src="logo.png" alt="Логотип" class="logo">
         <nav>
-            <a href="index.html">Информация</a>
-            <a href="biography.html">Биография</a>
-            <a href="gallery.html">Галерея</a>
-            <a href="about.html">О нас</a>
+            <ul class="nav-menu">
+                <li><a href="index.html">Информация</a></li>
+                <li><a href="biography.html">Биография</a></li>
+                <li><a href="gallery.html">Галерея</a></li>
+                <li><a href="about.html">О нас</a></li>
+            </ul>
         </nav>
+        <div class="language-switcher">
+            <button onclick="switchLanguage('ru')">Русский</button>
+            <button onclick="switchLanguage('en')">English</button>
+        </div>
     </header>
-    <main>
-        <section>
-            <h2>Информация</h2>
-            <p>
-                Здесь будет основная информация о вас или вашей компании.
-                Добавьте текст, который вы хотите, чтобы посетители могли прочитать.
-            </p>
-        </section>
-    </main>
-    
-    <!-- Переключатель языков внизу -->
-    <div>
-        <button onclick="setLanguage('ru')">Русский</button>
-        <button onclick="setLanguage('en')">English</button>
+
+    <div class="content">
+        <h1>Добро пожаловать на наш сайт</h1>
+        <p>Это пример текста для информационной страницы.</p>
     </div>
 
     <footer>
-        <p style="background-color: black; color: white; text-align: center; padding: 10px;">SHURIX</p>
+        <p>SHURIX</p>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
+
