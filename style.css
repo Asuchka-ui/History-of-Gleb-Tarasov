@@ -2,41 +2,34 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    background-color: black; /* Черный фон для основной части сайта */
+    color: white; /* Цвет текста */
 }
 
 header {
-    background-color: white;
+    background-color: white; /* Белый фон для верхней части */
     display: flex;
     justify-content: space-between;
-    align-items: center;
     padding: 10px 20px;
-    position: relative;
 }
 
-.logo img {
-    height: 50px; /* Размер логотипа */
+header .logo {
+    width: 150px; /* Ширина логотипа */
 }
 
 nav ul {
     list-style-type: none;
-    margin: 0;
     padding: 0;
-    display: flex;
 }
 
 nav ul li {
+    display: inline;
     margin-left: 20px;
 }
 
 nav ul li a {
     text-decoration: none;
-    color: black; /* Цвет ссылок */
-}
-
-main {
-    background-color: black;
-    color: white; /* Цвет текста */
-    padding: 20px;
+    color: black; /* Черный цвет ссылок */
 }
 
 footer {
@@ -54,41 +47,40 @@ footer {
 }
 
 .gallery-photo {
-    width: 30%; /* Измените ширину по вашему усмотрению */
-    margin: 10px;
+    width: 48%; /* Размер фотографий в галерее */
+    margin-bottom: 10px;
 }
 
 .biography-content {
     display: flex;
+    align-items: center; /* Выравнивание элементов по центру */
 }
 
 .biography-photo {
-    width: 50%; /* Ширина фотографии в биографии */
-    margin-right: 20px;
+    width: 200px; /* Размер фотографии в биографии */
+    margin-right: 20px; /* Отступ справа от фотографии */
 }
 
 .ad-banner {
-    background-color: rgba(255, 255, 255, 0.9);
-    padding: 10px;
-    text-align: center;
     position: fixed;
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 40px;
-    display: none; /* Скрываем по умолчанию */
-    z-index: 5; /* Чтобы реклама была выше контента */
+    background-color: rgba(255, 255, 255, 0.9); /* Полупрозрачный белый фон для рекламы */
+    text-align: center;
+    display: none; /* Скрыто по умолчанию */
+    z-index: 1000; /* Убедитесь, что баннер выше других элементов */
 }
 
 .close-btn {
-    background: none;
+    background-color: transparent;
     border: none;
-    font-size: 20px;
+    font-size: 24px;
+    color: black; /* Цвет кнопки закрытия */
     cursor: pointer;
     position: absolute;
-    right: 10px;
     top: 5px;
+    right: 10px;
 }
 
-}
 
