@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,20 +12,24 @@
         <img src="logo.png" alt="Logo" class="logo">
         <nav>
             <ul>
-                <li><a href="index.html">Information</a></li>
-                <li><a href="biography.html">Biography</a></li>
-                <li><a href="gallery.html">Gallery</a></li>
-                <li><a href="about.html">About Us</a></li>
+                <li><a href="index.html" data-en="Information" data-ru="Информация">Information</a></li>
+                <li><a href="biography.html" data-en="Biography" data-ru="Биография">Biography</a></li>
+                <li><a href="gallery.html" data-en="Gallery" data-ru="Галерея">Gallery</a></li>
+                <li><a href="about.html" data-en="About Us" data-ru="О нас">About Us</a></li>
             </ul>
         </nav>
+        <!-- Кнопка переключения языка -->
+        <div class="language-switcher">
+            <button onclick="setLanguage('en')">EN</button>
+            <button onclick="setLanguage('ru')">RU</button>
+        </div>
     </header>
 
     <section class="content">
-        <h1>Information Section</h1>
-        <p>This is where you can write your text for the Information section.</p>
+        <h1 data-en="Information Section" data-ru="Раздел Информация">Information Section</h1>
+        <p data-en="This is where you can write your text for the Information section." data-ru="Здесь вы можете написать текст для раздела информации.">This is where you can write your text for the Information section.</p>
     </section>
 
-    <!-- Водяной знак -->
     <footer>
         <p class="watermark">SHURIX</p>
     </footer>
@@ -37,6 +41,7 @@
     </div>
 </body>
 </html>
+
 
 
 
