@@ -25,7 +25,19 @@
     <main>
         <h1>Видеозвонок</h1>
         <p>Эта страница предназначена для видеозвонков. Подключите вашу камеру для использования функции видеозвонка.</p>
-        <!-- Здесь можно добавить код для видеозвонка -->
+
+        <div id="language-switcher">
+            <button onclick="switchLanguage('ru')">Русский</button>
+            <button onclick="switchLanguage('en')">English</button>
+        </div>
+
+        <div id="additional-section" style="display: none;">
+            <h2>Дополнительно</h2>
+            <ul>
+                <li><a href="videocall.html">Видеозвонок</a></li>
+                <li>Другие опции...</li>
+            </ul>
+        </div>
     </main>
     <footer>
         <p>© 2024 Shurix. Все права защищены.</p>
