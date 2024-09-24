@@ -1,87 +1,37 @@
-/* Общие стили */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #000; /* Чёрный фон */
-    color: #fff; /* Белый текст */
+/* Стили для модального окна */
+.modal {
+    display: none; 
+    position: fixed;
+    z-index: 1000; 
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; 
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
-/* Шапка (белая полоса сверху) */
-.header {
+.modal-content {
     background-color: #fff;
-    color: #000;
+    margin: 15% auto;
     padding: 20px;
+    border: 1px solid #888;
+    width: 60%;
+    color: #000;
     text-align: center;
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    border-radius: 10px;
 }
 
-/* Логотип */
-.logo img {
-    height: 50px;
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
 }
 
-/* Навигация */
-nav {
-    display: flex;
-    gap: 20px;
-}
-
-nav a {
+.close:hover, .close:focus {
     color: #000;
     text-decoration: none;
-    font-weight: bold;
-    padding: 10px;
-}
-
-nav a:hover {
-    text-decoration: underline;
-}
-
-/* Контент */
-main {
-    padding: 20px;
-    text-align: center;
-}
-
-/* Футер (чёрная полоса внизу) */
-.footer {
-    background-color: #000;
-    color: #fff;
-    text-align: center;
-    padding: 10px;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-}
-
-/* Галерея */
-.gallery {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    padding: 20px;
-}
-
-.gallery img {
-    width: 30%;
-    margin: 10px;
-    border: 2px solid #fff;
-    border-radius: 10px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.gallery img:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2);
-}
-
-/* Стили для разных страниц */
-.section-title {
-    font-size: 2rem;
-    margin-bottom: 20px;
+    cursor: pointer;
 }
 
