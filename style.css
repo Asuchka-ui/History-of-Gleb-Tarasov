@@ -1,50 +1,68 @@
+/* Стили для галереи */
+.gallery img {
+    width: 45%; /* Уменьшаем ширину картинок */
+    margin: 2%; /* Отступы между изображениями */
+    border-radius: 8px; /* Округляем края */
+    transition: transform 0.3s ease; /* Анимация при наведении */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Добавляем тень */
+}
+
+/* Анимация увеличения при наведении */
+.gallery img:hover {
+    transform: scale(1.05); /* Увеличение при наведении */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); /* Более глубокая тень */
+}
+
+/* Сетка для галереи - 2 изображения в одном ряду */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/* Основной дизайн сайта (если тебе нужен черно-белый интерфейс) */
 body {
     font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: black;
-    color: white;
+    background-color: #000; /* Черный фон */
+    color: #fff; /* Белый текст */
 }
 
-header {
-    background-color: white;
+/* Шапка сайта (белый верх) */
+.header {
+    background-color: #fff; /* Белая верхушка */
     padding: 10px;
-    border-bottom: 2px solid black;
+    text-align: center;
+    color: #000;
 }
 
-.logo img {
-    max-height: 50px;
+/* Логотип */
+.logo {
+    float: left;
 }
 
 nav {
-    margin-top: 10px;
+    display: inline-block;
+    float: right;
 }
 
-nav ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-nav ul li {
-    display: inline;
-    margin-right: 20px;
-}
-
-nav ul li a {
+nav a {
+    color: #000;
+    padding: 10px;
     text-decoration: none;
-    color: black;
 }
 
-main {
-    padding: 20px;
+nav a:hover {
+    text-decoration: underline;
 }
 
-footer {
-    background-color: white;
-    color: black;
+/* Футер (черный низ) */
+.footer {
+    background-color: #000;
+    color: #fff;
     text-align: center;
     padding: 10px;
-    position: relative;
+    position: fixed;
     bottom: 0;
     width: 100%;
 }
+
