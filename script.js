@@ -1,14 +1,32 @@
-function setLanguage(language) {
-    if (language === 'en') {
-        // Измените текст на английский
-        document.querySelector('.content h1').innerText = "Welcome to my site!";
-        document.querySelector('.content p').innerText = "Here you will find information about the project and much more.";
-        document.querySelector('.dropdown-content a').innerText = "Video Call"; // Пример для раздела Дополнительно
-    } else {
-        // Вернуть текст на русский
-        document.querySelector('.content h1').innerText = "Добро пожаловать на мой сайт!";
-        document.querySelector('.content p').innerText = "Здесь вы найдете информацию о проекте и многое другое.";
-        document.querySelector('.dropdown-content a').innerText = "Видеозвонок"; // Пример для раздела Дополнительно
-    }
+// script.js
+function changeLanguage() {
+    const language = document.getElementById('language').value;
+    const elementsToTranslate = document.querySelectorAll('[data-translate]');
+
+    elementsToTranslate.forEach(element => {
+        const key = element.getAttribute('data-translate');
+        element.textContent = translations[language][key];
+    });
 }
 
+// Пример перевода
+const translations = {
+    ru: {
+        title: "Добро пожаловать на сайт",
+        biographyTitle: "Биография",
+        galleryTitle: "Галерея",
+        aboutTitle: "О нас",
+        additionalTitle: "Дополнительно",
+        languageLabel: "Выберите язык:",
+        // Добавьте другие переводы по мере необходимости
+    },
+    en: {
+        title: "Welcome to the website",
+        biographyTitle: "Biography",
+        galleryTitle: "Gallery",
+        aboutTitle: "About Us",
+        additionalTitle: "Additional",
+        languageLabel: "Select language:",
+        // Добавьте другие переводы по мере необходимости
+    }
+};
