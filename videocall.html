@@ -10,7 +10,7 @@
 <body>
     <header>
         <div class="logo">
-            <img src="logo.png" alt="Логотип" />
+            <img src="logo.png" alt="Логотип">
         </div>
         <nav>
             <ul>
@@ -22,26 +22,22 @@
             </ul>
         </nav>
     </header>
-
     <main>
         <h1>Видеозвонок</h1>
-        <button id="start-video-call">Начать видеозвонок</button>
-        <video id="video" autoplay playsinline></video>
+        <video id="video" autoplay></video>
+        <button id="startButton">Начать видеозвонок</button>
     </main>
-
     <footer>
-        <p>SHURIX</p>
+        <p>© 2024 Shurix. Все права защищены.</p>
     </footer>
 
     <script>
-        document.getElementById('start-video-call').addEventListener('click', async () => {
-            const video = document.getElementById('video');
-            try {
-                const stream = await navigator.mediaDevices.getUserMedia({ video: true });
-                video.srcObject = stream;
-            } catch (error) {
-                console.error("Ошибка доступа к камере:", error);
-            }
+        const video = document.getElementById('video');
+        const startButton = document.getElementById('startButton');
+
+        startButton.addEventListener('click', async () => {
+            const stream = await navigator.mediaDevices.getUserMedia({ video: true });
+            video.srcObject = stream;
         });
     </script>
 </body>
