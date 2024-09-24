@@ -11,10 +11,11 @@ body {
     justify-content: space-between;
     align-items: center;
     border-bottom: 2px solid black;
+    flex-wrap: wrap; /* Позволяет заголовку быть более гибким */
 }
 
 .logo {
-    height: 50px; /* Размер логотипа */
+    height: 40px; /* Уменьшение размера логотипа */
 }
 
 .language-switch {
@@ -23,10 +24,11 @@ body {
 
 .nav {
     display: flex;
+    flex-wrap: wrap; /* Позволяет навигации быть более компактной */
 }
 
 .nav a {
-    margin: 0 10px;
+    margin: 5px 10px; /* Уменьшение отступов между ссылками */
     text-decoration: none;
     color: black;
 }
@@ -50,10 +52,11 @@ body {
 .gallery {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center; /* Центрирование изображений в галерее */
 }
 
 .gallery img {
-    width: 150px; /* Уменьшение размера изображений */
+    width: 150px; /* Уменьшение размера изображений в галерее */
     margin: 10px;
     transition: transform 0.2s;
 }
@@ -62,3 +65,29 @@ body {
     transform: scale(1.1); /* Эффект увеличения при наведении */
 }
 
+.biography-photo {
+    width: 50%; /* Уменьшение размера фото в биографии в 2 раза */
+    max-width: 300px; /* Максимальная ширина для фото */
+    display: block; /* Убирает лишнее пространство под изображением */
+    margin: 0 auto; /* Центрирование изображения */
+}
+
+@media (max-width: 600px) {
+    .header {
+        flex-direction: column; /* Переход на вертикальное размещение заголовка на узких экранах */
+        align-items: flex-start; /* Выравнивание элементов в заголовке */
+    }
+
+    .nav {
+        flex-direction: column; /* Вертикальное размещение навигации на узких экранах */
+        align-items: flex-start; /* Выравнивание элементов навигации */
+    }
+
+    .nav a {
+        margin: 5px 0; /* Уменьшение отступов для ссылок на мобильных устройствах */
+    }
+
+    .content {
+        padding: 10px; /* Уменьшение отступов на мобильных устройствах */
+    }
+}
