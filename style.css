@@ -1,44 +1,53 @@
-/* Основной дизайн сайта (черно-белый интерфейс) */
+/* Общие стили */
 body {
     font-family: Arial, sans-serif;
-    background-color: #000; /* Черный фон */
-    color: #fff; /* Белый текст */
     margin: 0;
     padding: 0;
+    background-color: #000; /* Чёрный фон */
+    color: #fff; /* Белый текст */
 }
 
-/* Шапка сайта (белая верхняя часть) */
+/* Шапка (белая полоса сверху) */
 .header {
     background-color: #fff;
+    color: #000;
     padding: 20px;
     text-align: center;
-    color: #000;
     position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 /* Логотип */
-.logo {
-    float: left;
-    width: 100px;
+.logo img {
+    height: 50px;
 }
 
+/* Навигация */
 nav {
-    display: inline-block;
-    float: right;
+    display: flex;
+    gap: 20px;
 }
 
 nav a {
     color: #000;
-    padding: 10px 15px;
     text-decoration: none;
     font-weight: bold;
+    padding: 10px;
 }
 
 nav a:hover {
     text-decoration: underline;
 }
 
-/* Футер (черная нижняя часть) */
+/* Контент */
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+/* Футер (чёрная полоса внизу) */
 .footer {
     background-color: #000;
     color: #fff;
@@ -49,7 +58,7 @@ nav a:hover {
     width: 100%;
 }
 
-/* Стили для галереи */
+/* Галерея */
 .gallery {
     display: flex;
     flex-wrap: wrap;
@@ -65,8 +74,14 @@ nav a:hover {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Анимация при наведении */
 .gallery img:hover {
     transform: scale(1.05);
     box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2);
 }
+
+/* Стили для разных страниц */
+.section-title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
