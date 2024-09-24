@@ -14,7 +14,7 @@ body {
 }
 
 .logo {
-    height: 50px; /* Подкорректируйте размер логотипа */
+    height: 50px; /* Размер логотипа */
 }
 
 .language-switch {
@@ -61,3 +61,4 @@ body {
 .gallery img:hover {
     transform: scale(1.1); /* Эффект увеличения при наведении */
 }
+
