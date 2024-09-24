@@ -39,4 +39,3 @@ document.addEventListener("DOMContentLoaded", function() {
     loadPage('info.html'); // Загружаем страницу по умолчанию
 });
 
-
