@@ -1,41 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-   <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Website Title</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Information</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
     <header>
-        <div class="logo">
-            <img src="logo.png" alt="Logo" id="logo">
-        </div>
+        <img src="logo.png" alt="Logo" class="logo">
         <nav>
             <ul>
-                <li><a href="info.html">Информация</a></li>
-                <li><a href="biography.html">Биография</a></li>
-                <li><a href="gallery.html">Галерея</a></li>
-                <li><a href="#about">О нас</a></li>
+                <li><a href="index.html">Information</a></li>
+                <li><a href="biography.html">Biography</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="about.html">About Us</a></li>
             </ul>
         </nav>
     </header>
-    <main>
-        <h1>Добро пожаловать на сайт!</h1>
-        <p>Это ваш сайт, на котором вы можете добавлять информацию.</p>
-    </main>
-    
-    <div class="ad-banner">
-        <button class="close-btn">&times;</button>
-        <img src="advertisement.png" alt="Advertisement" class="ad-image">
-    </div>
 
+    <section class="content">
+        <h1>Information Section</h1>
+        <p>This is where you can write your text for the Information section.</p>
+    </section>
+
+    <!-- Водяной знак -->
     <footer>
-        <p>Shurix</p>
+        <p class="watermark">SHURIX</p>
     </footer>
 
-    <script src="script.js"></script>
+    <!-- Реклама -->
+    <div id="ad-container">
+        <img src="ad-image.png" alt="Advertisement" class="ad-image">
+        <button id="close-ad" onclick="closeAd()">Close Ad</button>
+    </div>
 </body>
 </html>
 
