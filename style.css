@@ -1,80 +1,46 @@
 body {
     font-family: Arial, sans-serif;
     margin: 0;
-    padding: 0;
-    background-color: black; /* Черный фон */
-    color: white; /* Белый текст */
 }
 
 header {
-    background-color: white; /* Белый верх */
+    background-color: white;
+    color: black;
     padding: 10px;
     display: flex;
-    flex-direction: column; /* Вертикальная компоновка для мобильных */
-    align-items: flex-start; /* Выровнять элементы влево */
+    justify-content: space-between;
+    align-items: center;
 }
 
-.logo {
-    height: 50px; /* Высота логотипа */
+.logo img {
+    max-height: 50px;
 }
 
-.nav-menu {
+nav ul {
     list-style: none;
     padding: 0;
-    margin: 0;
-    display: flex;
-    flex-wrap: wrap; /* Позволяет пунктам меню занимать несколько строк */
 }
 
-.nav-menu li {
-    margin-right: 20px;
+nav ul li {
+    display: inline;
+    margin: 0 15px;
 }
 
-.nav-menu a {
+nav ul li a {
     text-decoration: none;
-    color: black; /* Черный текст навигации */
+    color: black;
 }
 
-.language-switcher {
-    margin-top: 10px; /* Отступ сверху для переключателя языка */
-}
-
-.content {
+main {
+    background-color: black;
+    color: white;
     padding: 20px;
 }
 
 footer {
-    background-color: black; /* Черный фон */
-    color: white; /* Белый текст */
+    background-color: white;
+    color: black;
     text-align: center;
-    padding: 10px 0;
+    padding: 10px;
+    position: relative;
 }
-
-.biography-content {
-    display: flex;
-    align-items: center;
-}
-
-.biography-photo {
-    width: 150px; /* Уменьшенная ширина фотографии */
-    height: auto;
-    margin-right: 20px; /* Отступ справа от фото */
-}
-
-.gallery {
-    display: flex;
-    flex-wrap: wrap; /* Перенос изображений на следующую строку */
-    justify-content: space-around; /* Выравнивание по центру */
-}
-
-.gallery-photo {
-    width: 200px; /* Ширина фотографий в галерее */
-    margin: 10px; /* Отступ между фотографиями */
-    transition: transform 0.3s; /* Анимация при наведении */
-}
-
-.gallery-photo:hover {
-    transform: scale(1.1); /* Увеличение при наведении */
-}
-
-
