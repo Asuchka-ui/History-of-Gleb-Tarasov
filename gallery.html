@@ -3,40 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
     <title>Галерея</title>
 </head>
 <body>
-
-    <div class="header">
-        <img src="logo.png" alt="Логотип" class="logo">
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="Logo">
+        </div>
         <nav>
             <ul>
-                <li><a href="index.html">Информация</a></li>
+                <li><a href="info.html">Информация</a></li>
                 <li><a href="biography.html">Биография</a></li>
                 <li><a href="gallery.html">Галерея</a></li>
-                <li><a href="about.html">О нас</a></li>
+                <li><a href="#about">О нас</a></li>
             </ul>
         </nav>
-    </div>
+    </header>
 
-    <div class="ad-banner">
-        <img src="ad-image.png" alt="Шуточная реклама">
-    </div>
-
-    <h1>Галерея</h1>
-    <div class="gallery">
-        <img src="image1.jpg" alt="Фото 1" class="gallery-photo">
-        <img src="image2.jpg" alt="Фото 2" class="gallery-photo">
-        <img src="image3.jpg" alt="Фото 3" class="gallery-photo">
-        <img src="image4.jpg" alt="Фото 4" class="gallery-photo">
-        <img src="image5.jpg" alt="Фото 5" class="gallery-photo">
-        <img src="image6.jpg" alt="Фото 6" class="gallery-photo">
-    </div>
+    <main>
+        <section class="gallery">
+            <h1>Галерея</h1>
+            <div class="gallery-container">
+                <a href="image1.html"><img class="gallery-photo" src="image1.jpg" alt="Image 1"></a>
+                <a href="image2.html"><img class="gallery-photo" src="image2.jpg" alt="Image 2"></a>
+                <a href="image3.html"><img class="gallery-photo" src="image3.jpg" alt="Image 3"></a>
+                <a href="image4.html"><img class="gallery-photo" src="image4.jpg" alt="Image 4"></a>
+                <a href="image5.html"><img class="gallery-photo" src="image5.jpg" alt="Image 5"></a>
+                <a href="image6.html"><img class="gallery-photo" src="image6.jpg" alt="Image 6"></a>
+            </div>
+        </section>
+    </main>
 
     <footer>
-        <p>© 2024 Shurix. Все права защищены.</p>
+        <p>&copy; Shurix</p>
     </footer>
 
+    <div class="ad-banner">
+        <img src="advertisement.png" alt="Advertisement">
+        <button class="close-btn">×</button>
+    </div>
+
+    <script src="script.js"></script>
 </body>
+</html>
+
 </html>
