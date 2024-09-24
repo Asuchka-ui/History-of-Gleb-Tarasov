@@ -2,15 +2,16 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    background-color: black; /* Черный фон */
+    color: white; /* Белый текст */
 }
 
 header {
-    background-color: white; /* Белый фон для верхней части */
-    padding: 20px;
+    background-color: white; /* Белый верх */
+    padding: 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 2px solid black; /* Черная линия внизу */
 }
 
 .logo {
@@ -19,8 +20,8 @@ header {
 
 nav ul {
     list-style: none;
-    margin: 0;
     padding: 0;
+    margin: 0;
     display: flex;
 }
 
@@ -28,60 +29,24 @@ nav ul li {
     margin-left: 20px;
 }
 
-nav ul li a {
+nav a {
     text-decoration: none;
-    color: black;
-    font-weight: bold;
+    color: black; /* Черный текст навигации */
 }
 
 .language-switcher {
-    margin-left: auto; /* Переместить переключатель языка вправо */
-}
-
-.language-switcher button {
-    margin-left: 10px;
+    margin-left: 20px;
 }
 
 .content {
     padding: 20px;
-    background-color: black; /* Черный фон для основной части */
-    color: white;
 }
 
 footer {
-    background-color: black; /* Черный фон для подвала */
-    color: white;
+    background-color: black; /* Черный фон */
+    color: white; /* Белый текст */
     text-align: center;
     padding: 10px 0;
-    position: relative;
-}
-
-.watermark {
-    position: absolute;
-    bottom: 10px;
-    right: 10px;
-    opacity: 0.1; /* Полупрозрачный водяной знак */
-}
-
-.gallery {
-    display: flex;
-    flex-wrap: wrap; /* Позволяет фотографии располагаться в несколько строк */
-    justify-content: space-between; /* Распределяет фото по всей ширине */
-}
-
-.gallery-photo {
-    width: 48%; /* Ширина фотографий для двух в ряд */
-    margin-bottom: 10px; /* Отступ снизу */
-    transition: transform 0.3s; /* Анимация при наведении */
-}
-
-.gallery-photo:hover {
-    transform: scale(1.05); /* Увеличение при наведении */
-}
-
-.full-image {
-    width: 100%; /* Полная ширина для изображений на страницах */
-    height: auto; /* Пропорциональная высота */
 }
 
 .advertisement {
@@ -108,4 +73,30 @@ footer {
     }
 }
 
+.biography-content {
+    display: flex;
+    align-items: center;
+}
+
+.biography-photo {
+    width: 150px; /* Уменьшенная ширина фотографии */
+    height: auto;
+    margin-right: 20px; /* Отступ справа от фото */
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap; /* Перенос изображений на следующую строку */
+    justify-content: space-around; /* Выравнивание по центру */
+}
+
+.gallery-photo {
+    width: 200px; /* Ширина фотографий в галерее */
+    margin: 10px; /* Отступ между фотографиями */
+    transition: transform 0.3s; /* Анимация при наведении */
+}
+
+.gallery-photo:hover {
+    transform: scale(1.1); /* Увеличение при наведении */
+}
 
