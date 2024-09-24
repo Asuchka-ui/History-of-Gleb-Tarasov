@@ -3,42 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Biography</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
+    <title>Биография</title>
 </head>
 <body>
     <header>
-        <img src="logo.png" alt="Logo" class="logo">
+        <img src="logo.png" alt="Логотип" class="logo">
         <nav>
             <ul>
-                <li><a href="index.html" data-en="Information" data-ru="Информация">Information</a></li>
-                <li><a href="biography.html" data-en="Biography" data-ru="Биография">Biography</a></li>
-                <li><a href="gallery.html" data-en="Gallery" data-ru="Галерея">Gallery</a></li>
-                <li><a href="about.html" data-en="About Us" data-ru="О нас">About Us</a></li>
+                <li><a href="index.html">Информация</a></li>
+                <li><a href="biography.html">Биография</a></li>
+                <li><a href="gallery.html">Галерея</a></li>
+                <li><a href="about.html">О нас</a></li>
             </ul>
+            <div class="language-switcher">
+                <button onclick="switchLanguage('ru')">Русский</button>
+                <button onclick="switchLanguage('en')">English</button>
+            </div>
         </nav>
-        <!-- Кнопка переключения языка -->
-        <div class="language-switcher">
-            <button onclick="setLanguage('en')">EN</button>
-            <button onclick="setLanguage('ru')">RU</button>
-        </div>
     </header>
 
-    <section class="content">
-        <h1 data-en="Biography" data-ru="Биография">Biography</h1>
-        <div class="bio-content">
-            <img src="photo1.jpg" alt="Person" class="bio-photo">
-            <div class="bio-text">
-                <p data-en="Gleb Tarasov - 02.01.2010" data-ru="Глеб Тарасов - 02.01.2010">Gleb Tarasov - 02.01.2010</p>
-                <p data-en="Here is the biography text. This section will contain more details about the person." data-ru="Здесь находится текст биографии. Этот раздел содержит больше деталей о человеке.">Here is the biography text. This section will contain more details about the person.</p>
-            </div>
+    <div class="content">
+        <h1>Биография</h1>
+        <div class="biography-content">
+            <img src="photo.jpg" alt="Фотография" class="biography-photo">
+            <p>Здесь будет текст биографии.</p>
         </div>
-    </section>
+    </div>
 
     <footer>
-        <p class="watermark">SHURIX</p>
+        <p>SHURIX</p>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
 
