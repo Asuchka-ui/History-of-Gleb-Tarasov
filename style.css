@@ -1,87 +1,130 @@
+/* Основные стили */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background-color: black; /* Черный фон для основной части */
-    color: white; /* Белый цвет текста */
+    background-color: black;
+    color: white;
 }
 
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: white; /* Белый фон для шапки */
     padding: 10px;
+    background-color: white;
 }
 
-.logo img {
-    height: 50px; /* Высота логотипа */
+.logo {
+    height: 50px;
 }
 
 nav ul {
-    list-style-type: none;
-    margin: 0;
+    list-style: none;
     padding: 0;
-    display: flex;
 }
 
 nav ul li {
-    margin-left: 20px;
+    display: inline;
+    margin-right: 20px;
 }
 
 nav ul li a {
+    color: black;
     text-decoration: none;
-    color: black; /* Черный цвет текста в навигации */
 }
 
-main {
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: black;
+    text-align: center;
+    padding: 10px;
+}
+
+.watermark {
+    color: white;
+    opacity: 0.5;
+}
+
+/* Контент */
+.content {
     padding: 20px;
+    min-height: calc(100vh - 100px);
 }
 
+.bio-content {
+    display: flex;
+    align-items: center;
+}
+
+.bio-photo {
+    width: 150px;
+    margin-right: 20px;
+}
+
+.bio-text {
+    max-width: 500px;
+}
+
+/* Галерея */
 .gallery {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
 }
 
-.gallery-image {
-    width: 48%; /* Ширина изображений в галерее (два в ряду) */
-    margin: 1%; /* Отступы между изображениями */
-}
-
-.biography-content {
+.gallery-row {
     display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
 }
 
-.biography-photo {
-    width: 200px; /* Размер фотографии в биографии */
-    margin-right: 20px; /* Отступ от текста */
+.gallery-item {
+    width: 48%;
 }
 
-.ad-banner {
+.gallery-item img {
+    width: 100%;
+    height: auto;
+}
+
+/* Реклама */
+#ad-container {
     position: fixed;
     bottom: 0;
-    left: 0;
-    right: 0;
-    background-color: rgba(255, 255, 255, 0.9); /* Полупрозрачный белый фон */
-    padding: 10px;
+    width: 100%;
+    background-color: transparent;
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 1000;
+    animation: slide-up 2s;
 }
 
 .ad-image {
-    width: 100%; /* Растягиваем изображение на всю ширину */
-    height: auto; /* Авто-высота для сохранения пропорций */
+    max-width: 100%;
+    height: 40px;
 }
 
-.close-btn {
+#close-ad {
     position: absolute;
     top: 5px;
     right: 10px;
-    background: transparent;
+    background-color: red;
+    color: white;
     border: none;
-    font-size: 20px;
+    padding: 5px;
     cursor: pointer;
+}
+
+/* Анимация */
+@keyframes slide-up {
+    from {
+        transform: translateY(100%);
+    }
+    to {
+        transform: translateY(0);
+    }
 }
 
 
