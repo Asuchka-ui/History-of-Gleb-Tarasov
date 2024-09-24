@@ -1,25 +1,27 @@
-// Инициализация языка по умолчанию
-let currentLanguage = 'ru';
+function switchLanguage(lang) {
+    const elements = {
+        'ru': {
+            'title': 'Информация',
+            'welcome': 'Добро пожаловать на наш сайт! Здесь вы можете найти информацию о нашем проекте, его целях и возможностях.',
+            'tech': 'Мы используем современные технологии для создания удобного интерфейса и полезных функций.',
+            'sections': 'На сайте доступны разделы с биографией, галереей и информацией о компании.',
+            'language': 'Вы можете переключать язык интерфейса на русский или английский.'
+        },
+        'en': {
+            'title': 'Information',
+            'welcome': 'Welcome to our website! Here you can find information about our project, its goals, and capabilities.',
+            'tech': 'We use modern technologies to create a user-friendly interface and useful features.',
+            'sections': 'Sections with biography, gallery, and company information are available on the site.',
+            'language': 'You can switch the interface language to Russian or English.'
+        }
+    };
 
-// Функция для установки языка
-function setLanguage(lang) {
-    currentLanguage = lang;
-    if (lang === 'ru') {
-        document.querySelector('h1').innerText = 'Название вашего сайта';
-        document.querySelector('h2').innerText = 'О сайте';
-        document.querySelector('button:nth-of-type(1)').innerText = 'Русский';
-        document.querySelector('button:nth-of-type(2)').innerText = 'English';
-        // Дополните остальные элементы
-    } else if (lang === 'en') {
-        document.querySelector('h1').innerText = 'Website Title';
-        document.querySelector('h2').innerText = 'About the Site';
-        document.querySelector('button:nth-of-type(1)').innerText = 'Russian';
-        document.querySelector('button:nth-of-type(2)').innerText = 'English';
-        // Дополните остальные элементы
-    }
+    const titles = document.querySelector('h1');
+    const paragraphs = document.querySelectorAll('main p');
+
+    titles.innerText = elements[lang]['title'];
+    paragraphs[0].innerText = elements[lang]['welcome'];
+    paragraphs[1].innerText = elements[lang]['tech'];
+    paragraphs[2].innerText = elements[lang]['sections'];
+    paragraphs[3].innerText = elements[lang]['language'];
 }
-
-// Установка языка по умолчанию при загрузке
-document.addEventListener('DOMContentLoaded', () => {
-    setLanguage(currentLanguage);
-});
