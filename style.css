@@ -36,9 +36,13 @@ nav a {
 
 .biography-photo {
     width: 100%; /* Ширина 100% от родителя */
-    max-width: 300px; /* Максимальная ширина 300px */
+    max-width: 200px; /* Максимальная ширина 200px */
     border-radius: 10px; /* Закругленные углы */
-    margin: 20px; /* Отступы */
+    margin-right: 20px; /* Отступы справа */
+}
+
+.biography-content p {
+    max-width: 500px; /* Максимальная ширина текста */
 }
 
 .gallery {
@@ -58,13 +62,10 @@ nav a {
     transform: scale(1.1); /* Увеличение изображения при наведении */
 }
 
-.about-section {
-    padding: 20px;
-}
-
 footer {
     background-color: #000; /* Черный фон для подвала */
     text-align: center;
     padding: 10px 0; /* Отступы в подвале */
 }
+
 
