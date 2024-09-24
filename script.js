@@ -1,4 +1,3 @@
-document.querySelector('.close-btn').addEventListener('click', function() {
-    document.querySelector('.ad-banner').style.display = 'none';
-});
-
+function closeAd() {
+    document.getElementById('ad-container').style.display = 'none';
+}
