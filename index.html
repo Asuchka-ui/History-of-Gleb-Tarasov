@@ -8,6 +8,13 @@
 </head>
 <body>
     <div class="header">
+        <div class="language-switch">
+            <label for="language" data-translate="languageLabel">Выберите язык:</label>
+            <select id="language" onchange="changeLanguage()">
+                <option value="ru">Русский</option>
+                <option value="en">English</option>
+            </select>
+        </div>
         <img src="logo.png" alt="Логотип" class="logo">
         <div class="nav">
             <a href="index.html" data-translate="title">Информация</a>
@@ -22,16 +29,10 @@
         <p>Здесь вы найдете информацию о нашем проекте.</p>
         <p>Это пример сайта с несколькими страницами.</p>
     </div>
-    <div class="language-switch">
-        <label for="language" data-translate="languageLabel">Выберите язык:</label>
-        <select id="language" onchange="changeLanguage()">
-            <option value="ru">Русский</option>
-            <option value="en">English</option>
-        </select>
-    </div>
     <div class="footer">
-        &copy; 2024 Ваш Сайт
+        &copy; 2024 Shurix
     </div>
     <script src="script.js"></script>
 </body>
 </html>
+
