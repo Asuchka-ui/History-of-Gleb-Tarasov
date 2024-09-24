@@ -3,64 +3,97 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Мой сайт</title>
+    <title>Мой стильный сайт</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
         /* Общие стили для всего сайта */
         body {
-            font-family: Arial, sans-serif;
-            background-color: #000; /* Черный фон */
-            color: #fff; /* Белый текст */
+            font-family: 'Roboto', sans-serif;
             margin: 0;
             padding: 0;
+            background-color: #000; /* Черный фон */
+            color: #fff; /* Белый текст */
         }
 
         /* Шапка */
         header {
-            background-color: #1a1a1a; /* Темно-серый фон шапки */
-            padding: 20px;
-            text-align: center;
+            background-color: #fff; /* Белый фон шапки */
+            color: #000; /* Черный текст */
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
 
-        header h1 {
-            color: #4CAF50; /* Зеленый цвет текста */
+        header img {
+            width: 150px; /* Ширина логотипа */
         }
 
         /* Основная часть */
-        main {
+        .container {
+            display: flex; /* Используем flexbox для размещения элементов */
             padding: 20px;
-            text-align: center;
         }
 
-        main p {
-            font-size: 18px;
+        .content {
+            flex: 1; /* Занимает оставшееся пространство */
+            padding-right: 20px; /* Отступ справа */
         }
 
-        /* Стили для изображений */
-        img {
-            width: 300px;
-            height: auto;
-            margin: 10px;
+        .photo-container {
+            position: relative; /* Позволяет использовать абсолютное позиционирование для текста */
+            width: 300px; /* Ширина фото */
+            margin-left: 20px; /* Отступ слева от фото */
+        }
+
+        .photo-container img {
+            width: 100%; /* Изображение занимает всю ширину контейнера */
             border-radius: 10px; /* Закругленные углы */
-            transition: transform 0.3s ease; /* Анимация увеличения при наведении */
+            transition: transform 0.3s ease; /* Анимация при наведении */
         }
 
-        /* Эффект при наведении на изображение */
-        img:hover {
-            transform: scale(1.1); /* Увеличение на 10% */
+        .photo-container img:hover {
+            transform: scale(1.1); /* Увеличение изображения при наведении */
+        }
+
+        .text-container {
+            margin-top: 10px; /* Отступ сверху для текста */
+        }
+
+        /* Нижний колонтитул */
+        footer {
+            background-color: #fff; /* Белый фон подвала */
+            color: #000; /* Черный текст */
+            text-align: center;
+            padding: 10px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>Глеб Тарасов ,биография мальчика-обезьяны </h1>
+        <img src="logo.png" alt="Логотип моей компании"> <!-- Замените на имя вашего логотипа -->
     </header>
-    <main>
-        <p>Глеб Тарасов это обычный мальчик из Днепра , фото его указано ниже:</p>
-        <img src="photo1.jpg" alt="Моя фотография">
-    </main>
-    <p>Глеб Тарасов приезженец из Мадагаскара живущий в городе Днепр.</p>
-<p>Этот сайт — был создан для информирования о уникальном человеке который создал свой язык.
-    И распространил новую болезнь под названием "Обезьяна осыпь".</p>
-    
+
+    <div class="container">
+        <div class="content">
+            <h1>Название сайта</h1>
+            <p>Здесь будет описание вашего сайта или компании. Вы можете добавить любую информацию, которую считаете нужной, чтобы рассказать о своем проекте.</p>
+        </div>
+        
+        <div class="photo-container">
+            <img src="photo.jpg" alt="Фотография"> <!-- Замените на имя вашего фото -->
+            <div class="text-container">
+                <p>Здесь можно добавить текст, который будет справа от фотографии.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Моя компания</p>
+    </footer>
 </body>
 </html>
+
