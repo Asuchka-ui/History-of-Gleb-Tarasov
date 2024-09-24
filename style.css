@@ -1,67 +1,56 @@
 body {
-    margin: 0;
     font-family: Arial, sans-serif;
-    background-color: #000; /* черный фон для всего тела */
-    color: #fff; /* белый текст */
+    margin: 0;
 }
 
 .header {
-    background-color: #fff; /* белый фон для заголовка */
-    padding: 10px; /* уменьшенное значение для уменьшения высоты */
+    background-color: white;
+    padding: 10px;
     display: flex;
-    align-items: center; /* центрирование содержимого по вертикали */
-}
-
-.logo {
-    height: 40px; /* уменьшите высоту логотипа */
-    margin-right: 20px; /* отступ между логотипом и навигацией */
-}
-
-.nav {
-    display: flex;
-    flex-grow: 1; /* позволяет навигации занимать доступное пространство */
-    justify-content: flex-end; /* выравнивание ссылок вправо */
-}
-
-.nav a {
-    color: #000; /* черный текст для ссылок */
-    text-decoration: none; /* убираем подчеркивание */
-    margin-left: 15px; /* отступ между ссылками */
-}
-
-.content {
-    padding: 20px; /* отступ для содержимого */
+    align-items: center;
+    justify-content: space-between;
 }
 
 .language-switch {
-    margin-top: 20px; /* отступ сверху для переключателя языков */
+    margin-right: 20px;
+}
+
+.logo {
+    max-height: 80px; /* Убедитесь, что логотип отображается корректно */
+}
+
+.nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: black;
+}
+
+.content {
+    padding: 20px;
+    background-color: black;
+    color: white;
 }
 
 .footer {
-    background-color: #000; /* черный фон для подвала */
-    color: #fff; /* белый текст */
-    text-align: center; /* центрирование текста */
-    padding: 10px; /* отступ внутри подвала */
-    position: fixed; /* фиксируем подвал внизу */
-    bottom: 0; /* прижимаем к низу */
-    left: 0;
-    right: 0; /* растягиваем на всю ширину */
-}
-
-.dropdown {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
     position: relative;
-    display: inline-block;
 }
 
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    z-index: 1;
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
 }
 
-.dropdown:hover .dropdown-content {
-    display: block;
+.gallery-image {
+    width: 150px; /* Уменьшите размер фотографий в галерее */
+    margin: 10px;
+    transition: transform 0.2s; /* Анимация при наведении */
+}
+
+.gallery-image:hover {
+    transform: scale(1.1); /* Увеличение при наведении */
 }
 
