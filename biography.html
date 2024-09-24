@@ -3,40 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Биография</title>
+    <title data-translate="biographyTitle">Биография</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="header">
         <img src="logo.png" alt="Логотип" class="logo">
         <div class="language-switch">
-            <label for="language">Выберите язык:</label>
+            <label for="language" data-translate="languageLabel">Выберите язык:</label>
             <select id="language" onchange="changeLanguage()">
                 <option value="ru">Русский</option>
                 <option value="en">English</option>
             </select>
         </div>
         <div class="nav">
-            <a href="index.html">Информация</a>
-            <a href="biography.html">Биография</a>
-            <a href="gallery.html">Галерея</a>
-            <a href="about.html">О нас</a>
-            <a href="extra.html">Дополнительно</a>
+            <a href="index.html" data-translate="title">Информация</a>
+            <a href="biography.html" data-translate="biographyTitle">Биография</a>
+            <a href="gallery.html" data-translate="galleryTitle">Галерея</a>
+            <a href="about.html" data-translate="aboutTitle">О нас</a>
+            <a href="extra.html" data-translate="additionalTitle">Дополнительно</a>
         </div>
     </div>
     <div class="content">
-        <h1>Биография</h1>
-        <img src="photo.jpg" alt="Фотография" class="biography-photo">
-        <p>Текст о биографии.</p>
+        <h1 data-translate="biographyTitle">Биография</h1>
+        <img src="photo.jpg" alt="Ваше фото" class="bio-photo">
+        <p data-translate="biographyText">Здесь будет текст о вашей биографии.</p>
     </div>
     <div class="footer">
         &copy; 2024 Shurix
     </div>
-    <script>
-        function changeLanguage() {
-            const lang = document.getElementById('language').value;
-            // Здесь будет код для смены языка
-        }
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
