@@ -27,14 +27,6 @@ function showAdWidget(page) {
     }
 }
 
-function closeAdWidget() {
-    const adWidget = document.getElementById('ad-widget');
-    adWidget.classList.remove('show'); // Убираем класс анимации
-    setTimeout(() => {
-        adWidget.style.display = 'none'; // Скрываем виджет после анимации
-    }, 500); // Дождаться окончания анимации
-}
-
 document.addEventListener("DOMContentLoaded", function() {
     loadPage('info.html'); // Загружаем страницу по умолчанию
 });
