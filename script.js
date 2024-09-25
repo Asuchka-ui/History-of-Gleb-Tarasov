@@ -1,36 +1,46 @@
-// script.js
-function changeLanguage() {
-    const language = document.getElementById('language').value;
-    const elementsToTranslate = document.querySelectorAll('[data-translate]');
+const languageSwitcher = document.getElementById('language-switcher');
+const allElements = document.querySelectorAll('[data-translate]');
 
-    elementsToTranslate.forEach(element => {
-        const key = element.getAttribute('data-translate');
-        element.textContent = translations[language][key];
+const translations = {
+    'en': {
+        'info': 'Information',
+        'biography': 'Biography',
+        'gallery': 'Gallery',
+        'about': 'About Us',
+        'extra': 'Extras',
+        'videocall': 'Video Call',
+        'minigame': 'Mini Game',
+        'footer': '© 2024 Shurix',
+        'welcome': 'Welcome to our website!'
+    },
+    'ru': {
+        'info': 'Информация',
+        'biography': 'Биография',
+        'gallery': 'Галерея',
+        'about': 'О нас',
+        'extra': 'Дополнительно',
+        'videocall': 'Видеозвонок',
+        'minigame': 'Мини-игра',
+        'footer': '© 2024 Shurix',
+        'welcome': 'Добро пожаловать на наш сайт!'
+    }
+};
+
+function setLanguage(language) {
+    allElements.forEach(element => {
+        const translationKey = element.getAttribute('data-translate');
+        if (translations[language][translationKey]) {
+            element.innerText = translations[language][translationKey];
+        }
     });
 }
 
-// Пример перевода
-const translations = {
-    ru: {
-        title: "Добро пожаловать на сайт",
-        biographyTitle: "Биография",
-        galleryTitle: "Галерея",
-        aboutTitle: "О нас",
-        additionalTitle: "Дополнительно",
-        languageLabel: "Выберите язык:",
-        welcomeText: "Здесь вы найдете информацию о нашем проекте.",
-        exampleText: "Это пример сайта с несколькими страницами."
-        // Добавьте другие переводы по мере необходимости
-    },
-    en: {
-        title: "Welcome to the website",
-        biographyTitle: "Biography",
-        galleryTitle: "Gallery",
-        aboutTitle: "About Us",
-        additionalTitle: "Additional",
-        languageLabel: "Select language:",
-        welcomeText: "Here you will find information about our project.",
-        exampleText: "This is an example of a website with several pages."
-        // Добавьте другие переводы по мере необходимости
-    }
+languageSwitcher.addEventListener('change', (event) => {
+    const selectedLanguage = event.target.value;
+    setLanguage(selectedLanguage);
+});
+
+// Set default language on page load
+window.onload = function() {
+    setLanguage('ru');  // Default to Russian
 };
