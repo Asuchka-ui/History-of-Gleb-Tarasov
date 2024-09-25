@@ -1,6 +1,4 @@
 const languageSwitcher = document.getElementById('language-switcher');
-const allElements = document.querySelectorAll('[data-translate]');
-
 const translations = {
     'en': {
         'info': 'Information',
@@ -8,7 +6,6 @@ const translations = {
         'gallery': 'Gallery',
         'about': 'About Us',
         'extra': 'Extras',
-        'footer': '© 2024 Shurix',
         'welcome': 'Welcome to our website!'
     },
     'ru': {
@@ -17,30 +14,30 @@ const translations = {
         'gallery': 'Галерея',
         'about': 'О нас',
         'extra': 'Дополнительно',
-        'footer': '© 2024 Shurix',
         'welcome': 'Добро пожаловать на наш сайт!'
     }
 };
 
 function setLanguage(language) {
-    allElements.forEach(element => {
-        const translationKey = element.getAttribute('data-translate');
-        if (translations[language][translationKey]) {
-            element.innerText = translations[language][translationKey];
+    document.querySelectorAll('[data-translate]').forEach(element => {
+        const key = element.getAttribute('data-translate');
+        if (translations[language][key]) {
+            element.textContent = translations[language][key];
         }
     });
-    // Сохраняем выбранный язык в localStorage
     localStorage.setItem('selectedLanguage', language);
 }
 
-// Проверяем сохранённый язык в localStorage
+// Проверяем и загружаем выбранный язык
 document.addEventListener('DOMContentLoaded', () => {
     const savedLanguage = localStorage.getItem('selectedLanguage') || 'ru';
-    languageSwitcher.value = savedLanguage;
     setLanguage(savedLanguage);
+    languageSwitcher.value = savedLanguage;
 });
 
+// Изменение языка
 languageSwitcher.addEventListener('change', (event) => {
     const selectedLanguage = event.target.value;
     setLanguage(selectedLanguage);
 });
+
