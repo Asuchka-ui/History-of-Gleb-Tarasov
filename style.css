@@ -1,93 +1,66 @@
+/* Основные стили для интерфейса */
 body {
-    font-family: Arial, sans-serif;
     margin: 0;
-    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #000;
+    color: #fff;
 }
 
-.header {
-    background-color: white;
-    padding: 10px;
+header {
+    background-color: #fff;
+    color: #000;
+    padding: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 2px solid black;
-    flex-wrap: wrap; /* Позволяет заголовку быть более гибким */
 }
 
 .logo {
-    height: 40px; /* Уменьшение размера логотипа */
+    height: 50px;
 }
 
-.language-switch {
-    margin-right: 20px;
+nav {
+    background-color: #000;
+    padding: 15px;
+    text-align: center;
 }
 
-.nav {
-    display: flex;
-    flex-wrap: wrap; /* Позволяет навигации быть более компактной */
+nav ul {
+    list-style-type: none;
+    padding: 0;
 }
 
-.nav a {
-    margin: 5px 10px; /* Уменьшение отступов между ссылками */
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
     text-decoration: none;
-    color: black;
+    font-size: 18px;
 }
 
 .content {
     padding: 20px;
-    background-color: black;
-    color: white;
-}
-
-.footer {
-    background-color: black;
-    color: white;
     text-align: center;
-    padding: 10px 0;
-    position: relative;
-    bottom: 0;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #000;
+    color: #fff;
+    position: fixed;
     width: 100%;
+    bottom: 0;
 }
 
-.gallery {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center; /* Центрирование изображений в галерее */
+#language-switcher {
+    background-color: #fff;
+    color: #000;
+    border: 1px solid #000;
+    padding: 5px;
+    font-size: 16px;
 }
 
-.gallery img {
-    width: 150px; /* Уменьшение размера изображений в галерее */
-    margin: 10px;
-    transition: transform 0.2s;
-}
-
-.gallery img:hover {
-    transform: scale(1.1); /* Эффект увеличения при наведении */
-}
-
-.biography-photo {
-    width: 50%; /* Уменьшение размера фото в биографии в 2 раза */
-    max-width: 300px; /* Максимальная ширина для фото */
-    display: block; /* Убирает лишнее пространство под изображением */
-    margin: 0 auto; /* Центрирование изображения */
-}
-
-@media (max-width: 600px) {
-    .header {
-        flex-direction: column; /* Переход на вертикальное размещение заголовка на узких экранах */
-        align-items: flex-start; /* Выравнивание элементов в заголовке */
-    }
-
-    .nav {
-        flex-direction: column; /* Вертикальное размещение навигации на узких экранах */
-        align-items: flex-start; /* Выравнивание элементов навигации */
-    }
-
-    .nav a {
-        margin: 5px 0; /* Уменьшение отступов для ссылок на мобильных устройствах */
-    }
-
-    .content {
-        padding: 10px; /* Уменьшение отступов на мобильных устройствах */
-    }
-}
