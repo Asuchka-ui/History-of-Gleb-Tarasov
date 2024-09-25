@@ -8,8 +8,6 @@ const translations = {
         'gallery': 'Gallery',
         'about': 'About Us',
         'extra': 'Extras',
-        'videocall': 'Video Call',
-        'minigame': 'Mini Game',
         'footer': '© 2024 Shurix',
         'welcome': 'Welcome to our website!'
     },
@@ -19,8 +17,6 @@ const translations = {
         'gallery': 'Галерея',
         'about': 'О нас',
         'extra': 'Дополнительно',
-        'videocall': 'Видеозвонок',
-        'minigame': 'Мини-игра',
         'footer': '© 2024 Shurix',
         'welcome': 'Добро пожаловать на наш сайт!'
     }
