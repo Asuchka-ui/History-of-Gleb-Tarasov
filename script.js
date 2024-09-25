@@ -29,14 +29,18 @@ function setLanguage(language) {
             element.innerText = translations[language][translationKey];
         }
     });
+    // Сохраняем выбранный язык в localStorage
+    localStorage.setItem('selectedLanguage', language);
 }
+
+// Проверяем сохранённый язык в localStorage
+document.addEventListener('DOMContentLoaded', () => {
+    const savedLanguage = localStorage.getItem('selectedLanguage') || 'ru';
+    languageSwitcher.value = savedLanguage;
+    setLanguage(savedLanguage);
+});
 
 languageSwitcher.addEventListener('change', (event) => {
     const selectedLanguage = event.target.value;
     setLanguage(selectedLanguage);
 });
-
-// Set default language on page load
-window.onload = function() {
-    setLanguage('ru');  // Default to Russian
-};
