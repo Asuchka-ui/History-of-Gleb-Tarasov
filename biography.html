@@ -4,40 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Биография</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="interface.css"> <!-- Подключаем стили интерфейса -->
 </head>
 <body>
-    <div class="header">
-        <img src="logo.png" alt="Логотип" class="logo">
-        <div class="language-switch">
-            <label for="language">Выберите язык:</label>
-            <select id="language" onchange="changeLanguage()">
-                <option value="ru">Русский</option>
-                <option value="en">English</option>
-            </select>
-        </div>
-        <div class="nav">
-            <a href="index.html">Информация</a>
-            <a href="biography.html">Биография</a>
-            <a href="gallery.html">Галерея</a>
-            <a href="about.html">О нас</a>
-            <a href="extra.html">Дополнительно</a>
-        </div>
-    </div>
-    <div class="content">
-        <h1>Биография</h1>
-        <img src="photo.jpg" alt="Фотография" class="biography-photo">
-        <p>Текст о биографии.</p>
-    </div>
-    <div class="footer">
-        &copy; 2024 Shurix
-    </div>
-    <script>
-        function changeLanguage() {
-            const lang = document.getElementById('language').value;
-            // Код для смены языка можно добавить здесь
-        }
-    </script>
+
+<header>
+    <img src="logo.png" alt="Shurix Logo">
+    <select id="language-switcher">
+        <option value="ru">Русский</option>
+        <option value="en">English</option>
+    </select>
+</header>
+
+<nav>
+    <ul>
+        <li>Информация</li>
+        <li>Биография</li>
+        <li>Галерея</li>
+        <li>О нас</li>
+        <li>Дополнительно</li>
+    </ul>
+</nav>
+
+<div class="content">
+    <h1>Биография</h1>
+    <img src="photo.jpg" alt="Биография фото" style="width:200px; border-radius:10px;">
+    <p>Текст биографии будет здесь...</p>
+</div>
+
+<footer>© 2024 Shurix</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
 
