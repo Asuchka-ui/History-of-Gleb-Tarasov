@@ -1,3 +1,4 @@
+// Получаем элементы и готовим переводы
 const languageSwitcher = document.getElementById('language-switcher');
 const translations = {
     'en': {
@@ -18,6 +19,7 @@ const translations = {
     }
 };
 
+// Функция для смены языка
 function setLanguage(language) {
     document.querySelectorAll('[data-translate]').forEach(element => {
         const key = element.getAttribute('data-translate');
@@ -25,17 +27,17 @@ function setLanguage(language) {
             element.textContent = translations[language][key];
         }
     });
-    localStorage.setItem('selectedLanguage', language);
+    localStorage.setItem('selectedLanguage', language); // Сохраняем выбор
 }
 
-// Проверяем и загружаем выбранный язык
+// Загружаем сохранённый язык при загрузке страницы
 document.addEventListener('DOMContentLoaded', () => {
     const savedLanguage = localStorage.getItem('selectedLanguage') || 'ru';
     setLanguage(savedLanguage);
     languageSwitcher.value = savedLanguage;
 });
 
-// Изменение языка
+// Смена языка при выборе в переключателе
 languageSwitcher.addEventListener('change', (event) => {
     const selectedLanguage = event.target.value;
     setLanguage(selectedLanguage);
