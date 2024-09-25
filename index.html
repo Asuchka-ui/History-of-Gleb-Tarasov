@@ -4,25 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shurix</title>
-    <link rel="stylesheet" href="interface.css"> <!-- Подключаем стили интерфейса -->
+    <link rel="stylesheet" href="style.css"> <!-- Ваш файл со стилями -->
 </head>
 <body>
 
 <header>
-    <img src="logo.png" alt="Shurix Logo">
-    <select id="language-switcher">
-        <option value="ru">Русский</option>
-        <option value="en">English</option>
-    </select>
+    <div class="header-container">
+        <img src="logo.png" alt="Shurix Logo" class="logo">
+        <select id="language-switcher">
+            <option value="ru">Русский</option>
+            <option value="en">English</option>
+        </select>
+    </div>
 </header>
 
 <nav>
     <ul>
-        <li data-translate="info">Информация</li>
-        <li data-translate="biography">Биография</li>
-        <li data-translate="gallery">Галерея</li>
-        <li data-translate="about">О нас</li>
-        <li data-translate="extra">Дополнительно</li>
+        <li><a href="index.html" data-translate="info">Информация</a></li>
+        <li><a href="biography.html" data-translate="biography">Биография</a></li>
+        <li><a href="gallery.html" data-translate="gallery">Галерея</a></li>
+        <li><a href="about.html" data-translate="about">О нас</a></li>
+        <li><a href="extra.html" data-translate="extra">Дополнительно</a></li>
     </ul>
 </nav>
 
@@ -32,10 +34,11 @@
 </div>
 
 <footer>
-    <span data-translate="footer">© 2024 Shurix</span>
+    <span>© 2024 Shurix</span>
 </footer>
 
 <script src="script.js"></script>
 </body>
 </html>
+
 
